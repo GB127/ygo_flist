@@ -2,6 +2,7 @@ import requests
 import os
 from copy import deepcopy
 
+filename = "GB_MAX_BANLIST_final.lflist.conf"
 def auto_ban():
     end = "10/26/2010"
     today = "04/27/2021"
@@ -10,13 +11,13 @@ def auto_ban():
         all_toban = rep_toban.json()["data"]
     else:
         raise BaseException("Something went wrong")
-    toreturn = "#[2005.4 GOAT]\n!2010.10 TG5\n#Cards after TG5\n"
+    toreturn = "#[2005.4 GOAT]\n!2010.10 GB&MAX\n#Cards after TG5\n"
     for card in all_toban:
         toreturn += f"{card['id']} -1 \n"
 
-    if os.path.exists("TG5_banlist.lflist.conf"):
-        os.remove("TG5_banlist.lflist.conf")
-    with open("TG5_banlist.lflist.conf", "w") as fichier:
+    if os.path.exists(filename):
+        os.remove(filename)
+    with open(filename, "w") as fichier:
         fichier.write(toreturn)
 
 def get_cards_pool():
@@ -170,29 +171,33 @@ def apply_banlist(pool):
 
     for card in pool:
         if card["name"] in forbidden:
-            with open("TG5_banlist.lflist.conf", "a") as fichier:
+            with open(filename, "a") as fichier:
                 fichier.write(f'{card["id"]} 0 \n')
         elif card["name"] in limited:
-            with open("TG5_banlist.lflist.conf", "a") as fichier:
+            with open(filename, "a") as fichier:
                 fichier.write(f'{card["id"]} 1 \n')
         elif card["name"] in limited:
-            with open("TG5_banlist.lflist.conf", "a") as fichier:
+            with open(filename, "a") as fichier:
                 fichier.write(f'{card["id"]} 2 \n')
-
         else:
             no_ban.append(card)
     return no_ban
 
 
 def allow_all(pool):
-    with open("TG5_banlist.lflist.conf", "a") as fichier:
+    with open(filename, "a") as fichier:
         for card in pool:
             fichier.write(f'{card["id"]} 3 \n')
+
+
+def ban_all(pool):
+    with open(filename, "a") as fichier:
+        for card in pool:
+            fichier.write(f'{card["id"]} 0 \n')
+
 
 
 if __name__ == "__main__":
     auto_ban()
     all_cards = get_cards_pool()
-
-    all_cards = apply_banlist(all_cards)
-    #allow_all(all_cards)
+    apply_banlist(all_cards)
