@@ -586,30 +586,14 @@ Spell Calling
 Spell Chronicle
 Symbol of Heritage
 Vicious Claw
-
-========================================================
-========================================================
-[STRP]Supreme Traps  - 120 DP for 5 cards, Total of 48 cards
-Themes: More Advanced Traps
-Cover: Call of the Haunted
-Rarity distribution: 3 Ultra Rare, 5 Super Rare, 12 Rare, 28 Common
-
-ULTRA RARE
-
 Call of the Haunted
 Gladiator Beast War Chariot
 Torrential Tribute
-
-SUPER RARE
-
 By Order of the Emperor
 Dark Trap Hole
 Glorious Illusion
 Inverse Universe
 Tyrant's Temper
-
-RARE
-
 Defensive Tactics
 Giant Trap Hole
 Gladiator Lash
@@ -622,9 +606,6 @@ Proof of Powerlessness
 Tour of Doom
 Treacherous Trap Hole
 Widespread Dud
-
-COMMON
-
 Alchemy Cycle
 An Unfortunate Report
 Battle of the Elements
@@ -653,25 +634,12 @@ Straight Flush
 The Gift of Greed
 Triggered Summon
 Trojan Gladiator Beast
-
-========================================================
-========================================================
-[PBRW]Power Brawlers  - 120 DP for 5 cards, Total of 108 cards
-Themes: Battle Damage
-Cover: Beast King Barbaros
-Rarity distribution: 6 Ultra Rare, 10 Super Rare, 24 Rare, 68 Common
-
-ULTRA RARE
-
 Beast King Barbaros
 Brain Control
 Gorz the Emissary of Darkness
 Megamorph
 Snipe Hunter
 Summoner Monk
-
-SUPER RARE
-
 Axe of Fools
 Botanical Lion
 Cyber Dragon
@@ -682,9 +650,6 @@ Great Shogun Shien
 Necro Gardna
 Overload Fusion
 Tragoedia
-
-RARE
-
 Bazoo the Soul-Eater
 Big Bang Shot
 Blowback Dragon
@@ -709,9 +674,6 @@ The Six Samurai - Irou
 The Six Samurai - Zanji
 United We Stand
 Unstable Evolution
-
-COMMON
-
 A Hero Emerges
 All-Out Attacks
 Armed Samurai - Ben Kei
@@ -780,25 +742,12 @@ The Six Samurai - Nisashi
 The Six Samurai - Yaichi
 The Six Samurai - Yariza
 Twin-Barrel Dragon
-
-========================================================
-========================================================
-[TCPF]Typecast Performance - 150 DP for 5 cards, Total of 103 cards
-Themes: Not Destroyed by Battle and other Protection
-Cover: Swords of Revealing Light
-Rarity distribution: 6 Ultra Rare, 10 Super Rare, 24 Rare, 63 Common
-
-ULTRA
-
 Gravity Bind
 Level Limit - Area B
 Marshmallon
 Night Assailant
 Swords of Revealing Light
 Wall of Revealing Light
-
-SUPER
-
 Anti-Spell Fragrance
 Compulsory Evacuation Device
 Cyber Valley
@@ -809,9 +758,6 @@ Nightmare Steelcage
 Penguin Soldier
 Threatening Roar
 Waboku
-
-RARE
-
 Arcana Force 0 - The Fool
 Begone, Knave!
 Curse of Royal
@@ -836,9 +782,6 @@ Xing Zhen Hu
 Yomi Ship
 Yubel - Terror Incarnate
 Zero Gravity
-
-COMMON
-
 Belial - Marquis of Darkness
 Blade Rabbit
 Call of the Earthbound
@@ -902,25 +845,12 @@ Two Thousand Needles
 Vengeful Bog Spirit
 Yubel
 Yubel - The Ultimate Nightmare
-
-========================================================
-========================================================
-[RLTF]Rule the Field - 180 DP for 5 cards, Total of 114 cards
-Themes: Field Control
-Cover: Skill Drain
-Rarity distribution: 6 Ultra Rare, 10 Super Rare, 23 Rare, 75 Common
-
-ULTRA
-
 Cold Wave
 Doomcaliber Knight
 Return from the Different Dimension
 Royal Decree
 Skill Drain
 Thunder King Rai-oh
-
-SUPER
-
 Alector, Sovereign of Birds
 Consecrated Light
 Fossil Dyna Pachycephalo
@@ -931,10 +861,6 @@ Light and Darkness Dragon
 Royal Oppression
 Summoning Curse
 Vanity's Fiend
-
-
-RARE
-
 Anarchist Monk Ranshin
 Banisher of the Radiance
 D.D. Assailant
@@ -958,9 +884,6 @@ Synchro Control
 The End of Anubis
 Tuner's Scheme
 Vanity's Emptiness
-
-COMMON
-
 Amplifier
 Anti-Magic Prism
 Appointer of the Red Lotus
@@ -1035,28 +958,12 @@ Weed Out
 Whirlwind Weasel
 Witch Doctor of Chaos
 Zeta Reticulant
-
-======================================================
-======================================================
-[SRFT]Special Relativity Fracture Theory -
-                                              180 DP for 5 cards, Total of 115
-cards
-Themes: Pulling a Special Win
-Cover: Exodia the Forbidden One
-Rarity distribution: 6 Ultra Rare, 10 Super Rare, 24 Rare, 75 Common
-
-
-ULTRA
-
 Card Destruction
 Exodia the Forbidden One
 Final Count Down
 Gift Card
 Mind Crush
 Necroface
-
-SUPER
-
 Bad Reaction to Simochi
 Book of Eclipse
 Chain Energy
@@ -1067,9 +974,6 @@ Nurse Reficule the Fallen One
 Rainbow Life
 Robbin' Goblin
 Upstart Life
-
-RARE
-
 Aegis of Gaia
 Catapult Turtle
 Chainsaw Insect
@@ -1094,9 +998,6 @@ Soul Taker
 The Bistro Butcher
 The Eye of Truth
 Type Zero Magic Crusher
-
-COMMON
-
 Abyssal Designator
 Altar for Tribute
 Ameba
@@ -1172,27 +1073,12 @@ Thunder Crash
 Token  Thanksgiving
 White Magical Hat
 Witch Doctor of Sparta
-
-
-========================================================
-========================================================
-[BBRD]Burn Bright Red - 180 DP for 5 cards, Total of 106 cards
-Themes: Direct Damage and Counters
-Cover: Solemn Judgment
-Rarity distribution: 6 Ultra Rare, 10 Super Rare, 24 Rare, 66 Common
-
-
-ULTRA
-
 Ceasefire
 Chain Strike
 Dark Bribe
 Just Desserts
 Magic Cylinder
 Solemn Judgment
-
-SUPER
-
 Accumulated Fortune
 Blast Sphere
 Chivalry
@@ -1203,9 +1089,6 @@ Phantom Skyblaster
 Poison of the Old Man
 Secret Barrel
 Solemn Warning
-
-RARE
-
 Barrel Behind the Door
 Black Horn of Heaven
 Bountiful Artemis
@@ -1230,10 +1113,6 @@ Van'Dalgyon the Dark Dragon Lord
 Voltanis the Adjudicator
 Winged Rhynos
 Zoma the Spirit
-
-
-COMMON
-
 Abaki
 Abare Ushioni
 Atomic Firefly
@@ -1300,28 +1179,12 @@ Trap of Board Eraser
 Trap Reclamation
 Trojan Blast
 Vanity's Call
-
-
-========================================================
-========================================================
-[SSTM]Spicy Stream - 180 DP for 5 cards, Total of 108 cards
-Themes: Spirit/Gemini/Toon/Union and Machinas
-Cover: Machina Fortress
-Rarity distribution: 6 Ultra Rare, 10 Super Rare, 24 Rare, 68 Common
-
-
-ULTRA
-
 Black Brutdrago
 Blazewing Butterly
 Machina Armored Unit
 Machina Fortress
 Roll Out!
 Supervise
-
-
-SUPER
-
 Dark Dust Spirit
 Featherizer
 Gemini Soldier
@@ -1332,9 +1195,6 @@ Machina Peacekeeper
 Phoenix Gearfried
 Superalloy Beast Raptinus
 Toon Table of Contents
-
-RARE
-
 Chthonian Emperor Dragon
 Evocator Chevalier
 Frontline Base
@@ -1359,9 +1219,6 @@ Toon World
 VWXYZ-Dragon Catapult Cannon
 XYZ-Dragon Cannon
 Yamato-No-Kami
-
-COMMON
-
 Aquarian Alessa
 Asura Priest
 Blue-Eyes Toon Dragon
@@ -1430,26 +1287,12 @@ Y-Dragon Head
 YZ-Tank Dragon
 Z-Metal Tank
 Zombie Tiger
-
-========================================================
-========================================================
-[BSMP]Beauty in Simplicity - 180 DP for 5 cards, Total of 118 cards
-Themes: Advanced Normal Monsters and Supports
-Cover: White Elephant's Gift
-Rarity distribution: 6 Ultra Rare, 10 Super Rare, 24 Rare, 118 Common
-
-
-ULTRA
-
 Ancient Rules
 Enchanting Fitting Room
 Faustian Bargain
 Heart of the Underdog
 Ojama Trio
 White Elephant's Gift
-
-SUPER
-
 A Major Upset
 Birthright
 Dark Factory of Mass Production
@@ -1460,9 +1303,6 @@ Ojama Knight
 Summoner's Art
 Swing of Memories
 Symbols of Duty
-
-RARE
-
 Amulet of Ambition
 Attack of the Cornered Rat
 Battle Footballer
@@ -1487,9 +1327,6 @@ Silent Doom
 Sonic Duck
 Soul Resurrection
 Soul Tiger
-
-COMMON
-
 7 Colored Fish
 Acrobat Monkey
 Amphibian Beast
@@ -1567,26 +1404,12 @@ United Resistance
 Wall Shadow
 Wingweaver
 Zoa
-
-========================================================
-========================================================
-[CRSO]Crossover Session - 180 DP for 5 cards, Total of 102 cards
-Themes: Fusion Support
-Cover: Super Polymerization
-Rarity distribution: 6 Ultra Rare, 10 Super Rare,  Rare,  Common
-
-
-ULTRA
-
 Chain Material
 Future Fusion
 Instant Fusion
 King of the Swamp
 Paradox Fusion
 Super Polymerization
-
-SUPER
-
 De-Fusion
 Des Koala
 Fusion Gate
@@ -1597,9 +1420,6 @@ Summoner of Illusions
 The Dark - Hex Sealed Fusion
 The Earth - Hex Sealed Fusion
 The Light - Hex Sealed Fusion
-
-RARE
-
 Charubin the Fire Knight
 Dark Balter the Terrible
 Darkfire Dragon
@@ -1624,9 +1444,6 @@ Sea Koala
 The Last Warrior from Another Planet
 Tree Otter
 Vermillion Sparrow
-
-COMMON
-
 Alligator's Sword Dragon
 Amphibious Bugroth
 Anti-Fusion Device
@@ -1689,27 +1506,12 @@ Versago the Destroyer
 Warrior of Tradition
 Zombie Warrior
 Zombyra the Dark
-
-========================================================
-=============[300]ROW THREE BOOSTER PACKS]==============
-========================================================
-[BOTP]Boy on the Podium  - 180 DP for 5 cards, Total of 97 cards
-Themes: Elemental Hero and Supports
-Cover: Elemental Hero Absolute Zero
-Rarity distribution: 6 Ultra Rare, 10 Super Rare, 24 Rare, 57 Common
-
-
-ULTRA
-
 E - Emergency Call
 Elemental Hero Absolute Zero
 Elemental Hero Prisma
 Elemental Hero Stratos
 Evil Hero Dark Gaia
 Miracle Fusion
-
-SUPER
-
 Dark Calling
 Elemental Hero Gaia
 Elemental Hero Great Tornado
@@ -1720,9 +1522,6 @@ Elemental Hero Woodsman
 Evil Hero Malicious Edge
 Parallel World Fusion
 R - Righteous Justice
-
-RARE
-
 Dark Fusion
 Elemental Hero Bladedge
 Elemental Hero Darkbright
@@ -1747,9 +1546,6 @@ O - Oversoul
 Phantom Magician
 Rainbow Neos
 Skyscraper 2 - Hero City
-
-COMMON
-
 Bubble  Blaster
 Bubble Illusion
 Bubble Shuffle
@@ -1807,25 +1603,11 @@ Spark Blaster
 Terra Firma Gravity
 Vision Hero Trinity
 Wroughtweiler
-
-=======================================================================
-=======================================================================
-[ANCT]Ancient Rituals - 180 DP for 5 cards, Total of 76 cards
-Themes: Rituals and Support
-Cover: Advanced Ritual Art
-Rarity distribution: 5 Ultra Rare, 7 Super Rare, 20 Rare, 44 Common
-
-ULTRA
-
 Advanced Ritual Art
 Contract with the Abyss
 Dark Master - Zorc
 Demise, King of Armageddon
 Manju of the Ten Thousand Hands
-
-
-SUPER
-
 Djinn Releaser of Rituals
 Herald of Perfection
 Preparation of Rites
@@ -1833,10 +1615,6 @@ Relinquished
 Reshef the Dark Being
 Ruin, Queen of Oblivion
 Senju of the Thousand Hands
-
-
-RARE
-
 Ascending Soul
 Dawn of the Herald
 Divine Grace - Northwemko
@@ -1857,10 +1635,6 @@ Ritual Weapon
 Shinato, King of a Higher Plane
 Sonic Bird
 The Masked Beast
-
-
-COMMON
-
 Ancient Jar
 Beastly Mirror Ritual
 Black Illusion Ritual
@@ -1905,25 +1679,11 @@ Turtle Oath
 War-Lion Ritual
 Zera Ritual
 Zera the Mant
-
-=======================================================================
-=======================================================================
-[RSYM]Responsive Sympathy - 180 DP for 5 cards, Total of 52 cards
-Themes: Synchros and Assault Support
-Cover: Colossal Fighter
-Rarity distribution: 5 Ultra Rare, 7 Super Rare, 20 Rare, 20 Common
-
-
-ULTRA
-
 Colossal Fighter
 Mind Control
 Miracle Synchro Fusion
 Mist Wurm
 Stardust Dragon/ Assault Mode
-
-SUPER
-
 Ally of Justice Decisive Armor
 Chaos-End Master
 Flamvell Uruquizas
@@ -1931,9 +1691,6 @@ Gaia Drake, the Universal Force
 Intercept Wave
 Shiny Black "C"
 Supreme Arcanite Magician
-
-RARE
-
 Ally of Justice Field Marshal
 Ally of Justice Light Gazer
 Assault Beast
@@ -1954,9 +1711,6 @@ Synchro Blast Wave
 Synchro Fusionist
 X-Saber Urbellum
 X-Saber Wayne
-
-COMMON
-
 Arcane Apprentice
 Arcanite Magician/ Assault Mode
 Assault Counter
@@ -1977,35 +1731,12 @@ Synchronized Realm
 Tune Warrior
 Tuner Capture
 Water Spirit
-
-=======================================================================
-=======================================================================
-[CFCN]Comprehensive Full Contact - 250 DP for 5 cards, Total of ?? cards
-Themes: ??
-Cover: Trishula, Dragon of the Ice Barrier
-Rarity distribution: ?? Ultra Rare, ?? Super Rare, ?? Rare, ?? Common
-
-Trishula, Dragon of the Ice Barrier + all cards from Power Brawler to Responsive
-
-
-=======================================================================
-=======================================================================
-[WTFS]Wings, Talons, Scales and Fangs - 150 DP for 5 cards, Total of 83 cards
-Themes: Dragon and Supports
-Cover: Red-Eyes Darkness Metal Dragon
-Rarity distribution: 5 Ultra Rare, 7 Super Rare, 20 Rare, 51 Common
-
-
-ULTRA
-
+Trishula, Dragon of the Ice Barrier
 Dragon's Mirror
 Five-Headed Dragon
 Prime Material Dragon
 Red-Eyes Darkness Metal Dragon
 Trident Dragion
-
-SUPER
-
 Blizzard Dragon
 Hardened Armed Dragon
 Kaibaman
@@ -2013,9 +1744,6 @@ Masked Dragon
 Red-Eyes B. Chick
 Red-Eyes Wyvern
 Totem Dragon
-
-RARE
-
 A Wingbeat of Giant Dragon
 Blues-Eyes White Dragon
 Burst Stream of Destruction
@@ -2036,9 +1764,6 @@ Super Rejuvenation
 The White Stone of Legend
 Twin-Headed Behemoth
 White-Horned Dragon
-
-COMMON
-
 B. Skull Dragon
 Blue-Eyes Shining Dragon
 Blue-Eyes Ultimate Dragon
@@ -2090,24 +1815,11 @@ Tyrant Dragon
 Vanguard Dragon
 White Dragon Ritual
 White Night Dragon
-
-=======================================================================
-=======================================================================
-[SWND]Set of Wonders - 150 DP for 5 cards, Total of 81 cards
-Themes: Gravekeeper's and other Spellcasters
-Cover: Arcanite Magician
-Rarity distribution: 5 Ultra Rare, 7 Super Rare, 19 Rare, 50 Common
-
-Ultra
-
 Arcanite Magician
 Chaos Sorcerer
 Magician's Circle
 Necrovalley
 The Tricky
-
-SUPER
-
 Apprentice Magician
 Gravekeeper's Spy
 Magical Dimension
@@ -2115,10 +1827,6 @@ Secret Village of the Spellcasters
 Silent Magician LV4
 Spell Power Grasp
 Tempest Magician
-
-
-RARE
-
 A Cat of Ill Omen
 Ancient Lamp
 Blizzard Princess
@@ -2138,9 +1846,6 @@ Old Vindictive Magician
 Royal Magical Library
 Royal Tribute
 Tower of Bavel
-
-COMMON
-
 A Man with Wdjat
 Alchemist of Black Spells
 An Owl of Luck
@@ -2190,24 +1895,11 @@ Rite of Spirit
 Silent Magician LV8
 Sorcerer of Dark Magic
 Tricky Spell 4
-
-=======================================================================
-=======================================================================
-[EPDS]The Ever Present Dark Side - 150 DP for 5 cards, Total of 71 cards
-Themes: Fiends and Supports
-Cover: Phantom of Chaos
-Rarity distribution: 5 Ultra Rare, 7 Super Rare, 20 Rare, 39 Common
-
-ULTRA
-
 Darkness Neosphere
 Doom Shaman
 Grave Squimer
 Grinder Golem
 Phantom of Chaos
-
-SUPER
-
 Dark Ruler Ha Des
 Emperor Sem
 Evil Hero Infernal Gainer
@@ -2215,9 +1907,6 @@ Gaap the Divine Soldeir
 Goblin King
 Puppet Master
 Sky Scourge Norleras
-
-RARE
-
 Bark of Dark Ruler
 Brron, Mad King of Dark World
 Byser Shock
@@ -2238,9 +1927,6 @@ Sillva, Warlord of Dark World
 The Wicked Avatar
 The Wicked Dreadroot
 The Wicked Eraser
-
-COMMON
-
 Aswan Apparition
 Beiige, Vanguard of Dark World
 Big Eye
@@ -2280,24 +1966,11 @@ Twin-Headed Wolf
 Viser Des
 Winged Minion
 Zure, Knight of Dark World
-
-=======================================================================
-=======================================================================
-[TWRS]Those Who Remain Silent - 150 DP for 5 cards, Total of 68 cards
-Themes: Zombie
-Cover: Plaguespreader Zombie
-Rarity distribution: 5 Ultra Rare, 7 Super Rare, 20 Rare, 36 Common
-
-ULTRA
-
 Mezuki
 Plaguespreader Zombie
 Revived King Ha Des
 Spirit Reaper
 Zombie World
-
-SUPER
-
 Book of Life
 Des Lacooda
 Doomkaiser Dragon
@@ -2305,9 +1978,6 @@ Goblin zombie
 Paladin of the Curse Dragon
 Pyramid Turtle
 Zombie Master
-
-RARE
-
 Archfiend Zombie-Skull
 Berserk Dragon
 Call of the Mummy
@@ -2328,9 +1998,6 @@ The Lady in Wight
 Vampire Lord
 Vampire's Curse
 Wightmare
-
-COMMON
-
 A Deal With Dark Ruler
 Beast of the Pharaoh
 Blood Sucker
@@ -2367,24 +2034,11 @@ Vampire Lady
 Violet Crystal
 Wandering Mummy
 Zombie Mammoth
-
-========================================================
-========================================================
-[FSUR]Frontline Survivors - 150 DP for 5 cards, Total of 83 cards
-Themes: Warriors
-Cover: Reinforcements of the Army
-Rarity distribution: 5 Ultra Rare, 7 Super Rare, 20 Rare, 51 Common
-
-ULTRA
-
 Destiny Draw
 Destiny Hero - Malicious
 Destiny Hero - Plasma
 Reinforcements of the Army
 Trap Dustshoot
-
-SUPER
-
 Dark Scorpion - Meanae the Thorn
 Destiny End Dragoon
 Destiny Hero - Diamond Dude
@@ -2392,9 +2046,6 @@ Divine Sword - Phoenix Blade
 Marauding Captain
 The Immortal Bushi
 The Warrior Returning Alive
-
-RARE
-
 Assault Armor
 Clock Tower Prison
 Command Knight
@@ -2415,9 +2066,6 @@ Gilford the Legend
 Light Laser
 Needle Wall
 Vengeful Shinobi
-
-COMMON
-
 Armed Ninja
 Armor Breaker
 Blade Skater
@@ -2468,24 +2116,11 @@ Throwstone Unit
 Timidity
 Warrior Elimination
 White Ninja
-
-=======================================================================
-=======================================================================
-[MECH]Mechanism Menagerie - 150 DP for 5 cards, Total of 86 cards
-Themes: Machines
-Cover: Ancient Gear Gadjiltron Dragon
-Rarity distribution: 5 Ultra Rare, 7 Super Rare, 20 Rare, 54 Common
-
-ULTRA
-
 Ancient Gear Gadjiltron Dragon
 Card Trooper
 Cyber Eltanin
 Geartown
 Limiter Removal
-
-SUPER
-
 Chimeratech Fortress Dragon
 Drillroid
 Machine Assembly Line
@@ -2493,9 +2128,6 @@ Machine Duplication
 Power Bond
 Submarineroid
 Ultimate Ancient Gear Golem
-
-RARE
-
 Ancient Gear Beast
 Ancient Gear Castle
 Ancient Gear Engineer
@@ -2516,9 +2148,6 @@ Super Vehicroid Jumbo Drill
 Supercharge
 Vehicroid Connection Zone
 Yellow Gadget
-
-COMMON
-
 7 Completed
 Acid Rain
 Adhesive Explosive
@@ -2573,26 +2202,11 @@ Truckroid
 UFOroid
 UFOroid Fighter
 Wonder Garage
-
-====================================================================
-====================[400] ROW FOUR BOOSTER PACKS====================
-====================================================================
-[ATND]Angels on the Tip of a Needle  - 150 DP for 5 cards, Total of 80 cards
-Themes: Fairies
-Cover: Archlord Kristya
-Rarity distribution: 5 Ultra Rare, 7 Super Rare, 20 Rare, 48 Common
-
-
-ULTRA
-
 Archlord Kristya
 Darklord Asmodeus
 Darklord Desire
 Darklord Superbia
 Valhalla, Hall of the Fallen
-
-SUPER
-
 Athena
 Coat of Justice
 Gellenduo
@@ -2600,9 +2214,6 @@ Hecatrice
 Nova Summoner
 Splendid Venus
 Tethys, Goddess of Light
-
-RARE
-
 Angel 07
 Arcana Force Ex - The Dark Ruler
 Arcana Force Ex - The Light Ruler
@@ -2623,9 +2234,6 @@ The Sanctuary in the Sky
 Tulatin
 Victoria
 Zeradias, Herald of Heaven
-
-COMMON
-
 Absorbing Kid from the Sky
 Agido
 Airknight Parshath
@@ -2674,25 +2282,11 @@ Updraft
 Warrior of Zera
 White Night Queen
 Zolga
-
-=======================================================================
-=======================================================================
-[OBAB]Once a Beast, Always a Beast - 150 DP for 5 cards, Total of 83 cards
-Themes: Beasts, Beast-Warriors and Wing Beasts
-Cover: Resuce Cat
-Rarity distribution: 5 Ultra Rare, 7 Super Rare, 20 Rare,  Common
-
-
-ULTRA
-
 Green Baboon, Defender of the Forest
 Icarus Attack
 Manticore of Darkness
 Rescue Cat
 Swallow's Nest
-
-SUPER
-
 Ancient City - Rainbow Ruins
 Chain Dog
 Crystal Beast Sapphire Pegasus
@@ -2700,9 +2294,6 @@ Key Mouse
 King of the Beasts
 Lock Cat
 Super-Nimble Mega Hamster
-
-RARE
-
 Battlestorm
 Beast Soul Swap
 Beast Striker
@@ -2723,9 +2314,6 @@ Spiritual Forest
 The Atmosphere
 Troposphere
 Wild Nature's Release
-
-COMMON
-
 Ancient Crimson Ape
 Andro Sphinx
 Beast Fangs
@@ -2777,25 +2365,11 @@ Theinen the Great Sphinx
 Transforming Sphere
 Triangle Ecstasy Spark
 Yellow Baboon, Archer of the Forest
-
-=======================================================================
-=======================================================================
-[GITW]Gardening in the Wild - 150 DP for 5 cards, Total of 80 cards
-Themes: Insects, Plants and Rocks
-Cover: Lonefire Blossom
-Rarity distribution: 5 Ultra Rare, 7 Super Rare, 20 Rare, 48 Common
-
-
-ULTRA
-
 Anteatereatingant
 Doom Doozer
 Lonefire Blossom
 Miracle Fertilizer
 Tytannial, Princess of Camellias
-
-SUPER
-
 Gaia Plate the Earth Giant
 Gokipon
 Howling Insect
@@ -2803,9 +2377,6 @@ Lord Poison
 Megarock Dragon
 Pinch Hopper
 Wall of Thorns
-
-RARE
-
 Aztekipede, the Worm Warrior
 Botanical Girl
 Cactus Bouncer
@@ -2825,9 +2396,6 @@ Rock Bombardment
 Super Solar Nutrient
 The World Tree
 Verdant Sanctuary
-
-COMMON
-
 Anti-Aircraft Flower
 Arcane Archer of the Forest
 Arsenal Bug
@@ -2876,25 +2444,11 @@ Sinister Seeds
 Sweet Corn
 Vile Germs
 Wodan the Resident of the Forest
-
-=======================================================================
-=======================================================================
-[CBLD]Cold-Blooded Pride - 150 DP for 5 cards, Total of 79 cards
-Themes: Dinosaurs and Reptiles
-Cover: Cosmic Fortress Gol'Gar
-Rarity distribution: 5 Ultra Rare, 7 Super Rare, 20 Rare, 47 Common
-
-
-ULTRA
-
 Alien Ammonite
 Cosmic Fortress Gol'Gar
 Evil Dragon Anata
 Tyranno Infinity
 Vennominaga the Deity of Poisonous Snakes
-
-SUPER
-
 Alien Overlord
 Big Evolution Pill
 Code A Ancient Ruins
@@ -2902,9 +2456,6 @@ Offering to the Snake Deity
 Planet Pollutant Virus
 Snake Rain
 Vennominon the King of Poisonous Snakes
-
-RARE
-
 Alien Dog
 Alien Hypno
 Babycerasaurus
@@ -2925,9 +2476,6 @@ Survival Instinct
 Tail Swipe
 Ultimate Tyranno
 Venom Swamp
-
-COMMON
-
 "A" Cell Breeding Device
 "A" Cell Incubator
 "A" Cell Scatter Burst
@@ -2975,26 +2523,11 @@ Venom Serpent
 Venom Shot
 Venom Snake
 Volcanic Eruption
-
-=======================================================================
-=======================================================================
-[TETW]The Edge of the World - 150 DP for 5 cards, Total of 63 cards
-Themes: Aqua, Pyro, Thunder, Fish and Sea Serpents
-Cover: Treeborn Frog
-Rarity distribution: 5 Ultra Rare, 7 Super Rare, 20 Rare, 31 Common
-
-
-ULTRA
-
 Deep Sea Diver
 Fishborg Blaster
 Ronintoadin
 Substitoad
 Treeborn Frog
-
-
-SUPER
-
 Dupe Frog
 Royal Firestorm Guards
 Sea Dragon Lord Gishilnodon
@@ -3002,9 +2535,6 @@ Superancient Deepsea King Coelacanth
 Swap Frog
 Volcanic Counter
 Volcanic Rocket
-
-RARE
-
 Abyssal Kingshark
 Blaze Accelerator
 Cranium Fish
@@ -3025,9 +2555,6 @@ Volcanic Scattershot
 Volcanic Shell
 Volcanic Slicer
 Wetlands
-
-COMMON
-
 Beelze Frog
 Cannonball Spear Shellfish
 Creeping Doom Manta
@@ -3059,36 +2586,14 @@ Volcanic Hammerer
 Volcanic Rat
 Volcanic Recharge
 Wild Fire
-
-=======================================================================
-=======================================================================
-[ORGN]The Origin of Species - 200 DP for 5 cards, Total of ?? cards
-Themes: ??
-Cover:
-Rarity distribution: ?? Ultra Rare, ?? Super Rare, ?? Rare, ?? Common
-
-Solidarity + Brionac, Dragon of the Ice Barrier and cards from:
-                                 Wings,Talons,Scales and Fangs - The Edge of the
-World
-
-========================================================
-========================================================
-[DARK]The Truth's Within Me - 120 DP for 5 cards, Total of 94 cards
-Themes: Dark Attribute
-Cover: Steelswarm Caucastag
-Rarity distribution: 6 Ultra Rare, 10 Super Rare, 24 Rare, 54 Common
-
-ULTRA
-
+Solidarity
+Brionac, Dragon of the Ice Barrier
 Allure of Darkness
 Armageddon Knight
 Caius the Shadow Monarch
 Dark End Dragon
 Fires of Doomsday
 Steelswarm Caucastag
-
-SUPER
-
 Darklord Zerato
 Genex Ally Axel
 Genex Ally Triarm
@@ -3099,9 +2604,6 @@ Mystic Plasma Zone
 Mystic Tomato
 Steelswarm Girastag
 The Dark Creator
-
-RARE
-
 Ally of Justice Cosmic Gateway
 Ally of Justice Unlimiter
 Barrier Statue of the Abyss
@@ -3126,9 +2628,6 @@ Steelswarm Moth
 Sword of Dark Rites
 The Beginning of the End
 Veil of Darkness
-
-COMMON
-
 Ally Mind
 Ally of Justice Clausolas
 Ally of Justice Core Destroyer
@@ -3183,24 +2682,11 @@ Sword of Dark Destruction
 Umbral Soul
 Wicked-Breaking Flamberge - Baou
 Witch's Apprentice
-
-========================================================
-========================================================
-[FIRE]I'm on Fire - 120 DP for 5 cards, Total of 86 cards
-Themes: Fire Attibutes
-Cover: Ancient Flamvell Diety
-Rarity distribution: 5 Ultra Rare, 10 Super Rare, 24 Rare, 47 Common
-
-ULTRA
-
 Ancient Flamvell Deity
 Flamvell Firedog
 Horus the Black Flame Dragon LV8
 Rekindling
 Thestalos the Firestorm Monarch
-
-SUPER
-
 Flamvell Magician
 Flamvell Poun
 Horus the Black Flame Dragon LV6
@@ -3238,9 +2724,6 @@ Neo Flamvell Origin
 Neo Flamvell Sabre
 Spirit of Flames
 Thermal Genex
-
-COMMON
-
 Blazing hiita
 Blazing Inpachi
 Burning Spear
@@ -3288,26 +2771,12 @@ Soaring Eagle Above the Searing Land
 Twinheaded Beast
 Ultimate Baseball Kid
 Woodborg Inpachi
-
-==========================================================
-==========================================================
-[WATR]In My Element - 120 DP for 5 cards, Total of 90 cards
-Themes: Water Attributes
-Cover: Gungnir, Dragon of the Ice Barrier
-Rarity distribution: 6 Ultra Rare, 10 Super Rare, 24 Rare, 50 Common
-
-
-ULTRA
-
 Abyss Soldier
 Gungnir, Dragon of the Ice Barrier
 Mobius the Frost Monach
 Moray of Greed
 Salvage
 Snowman Eater
-
-SUPER
-
 A Legendary Ocean
 Codarus
 Evigishki Soul Ogre
@@ -3318,9 +2787,6 @@ Mother Grizzly
 Resse the Ice Mistress
 Umiiruka
 Water Hazard
-
-RARE
-
 Aegis of the Ocean Dragon Lord
 Aqua Spirit
 Armed Sea Hunter
@@ -3345,9 +2811,6 @@ Suijin
 Tornado Wall
 Unshaven Angler
 Warrior of Atlantis
-
-COMMON
-
 Amphibious Bugroth MK-3
 Barrier Statue if the Torrent
 Blizzard Warrior
@@ -3398,25 +2861,12 @@ Strategist of the Ice Barrier
 The Legendary Fisherman
 Warlock of the Ice Barrier
 Water Dragon
-
-=======================================================================
-=======================================================================
-[WIND]Butterfly Effect - 120 DP for 5 cards, Total of 93 cards
-Themes: Wind Attributes
-Cover: Dragunity Arma - Laevateinn
-Rarity distribution: 6 Ultra Rare, 10 Super Rare, 24 Rare, 53 Common
-
-ULTRA
-
 Dark Simorgh
 Dragon Ravine
 Dragunity Arma - Laevateinn
 Dragunity Phalanx
 Dragunity Birdman
 Raiza the Storm Monarch
-
-SUPER
-
 Armed Dragon LV7
 Dragon Mastery
 Dragunity Aklys
@@ -3427,9 +2877,6 @@ Flying Kamakiri #1
 Mist Valley Falcon
 Mist Valley Thunderbird
 Rising Air Current
-
-RARE
-
 Armed Dragon LV5
 Arsenal Summoner
 Barrier Statue of the Stormwinds
@@ -3454,9 +2901,6 @@ Vindikite R-Genex
 Winda, Priestess of Gusto
 Windaar, Sage of Gusto
 Windmill Genex
-
-COMMON
-
 4-Starred Ladybug of Doom
 Armed Dragon LV10
 Armed Dragon LV3
@@ -3510,26 +2954,12 @@ Ultimate Insect LV7
 Vortex Trooper
 Whirlwind Prodigy
 Wind Effigy
-
-========================================================
-==============[500]ROW FIVE BOOSTER PACKS]===============
-========================================================
-[LGHT]Shade of Light - 120 DP for 5 cards, Total of 99 cards
-Themes: Light Attributes
-Cover: Vylon Sigma
-Rarity distribution: 6 Ultra Rare, 10 Super Rare, 24 Rare, 59 Common
-
-ULTRA RARE
-
 Fabled Leviathan
 Fabled Raven
 Honest
 The Fabled Cerburrel
 The Fabled Unicorn
 Vylon Sigma
-
-SUPER RARE
-
 Beckoning Light
 Fabled Krus
 Fabled Valkyrus
@@ -3540,9 +2970,6 @@ Shining Angel
 The Creator
 Twin Swords of Flashing Light - Tryce
 Vylon Epsilon
-
-RARE
-
 Barrier Statue of the Heavens
 Fabled Grimro
 Fabled Kushano
@@ -3567,9 +2994,6 @@ Worm Queen
 Worm Victory
 Worm Zero
 Zaborg the Thunder Monarch
-
-COMMON
-
 Elf's Light
 Fabled Ashenveil
 Fabled Dianaira
@@ -3629,25 +3053,12 @@ Worm Ugly
 Worm Warlord
 Worm Xex
 Worm Yagan
-
-========================================================
-========================================================
-[ERTH]I Walk the Earth - 120 DP for 5 cards, Total of 98 cards
-Themes: Earth Attributes
-Cover: Naturia Barkion
-Rarity distribution: 6 Ultra Rare, 10 Super Rare, 24 Rare, 58 Common
-
-ULTRA
-
 Gottoms' Emergency Call
 Naturia Bamboo Shoot
 Naturia Barkion
 Naturia Beast
 X-Saber Airbellum
 XX-Saber Gottoms
-
-SUPER
-
 Gaia Power
 Gem-Knight Ruby
 Giant Rat
@@ -3658,9 +3069,6 @@ Naturia Mantis
 Naturia Pumpkin
 XX-Saber Emmersblade
 XX-Saber Gardestrike
-
-RARE
-
 Barkion's Bark
 Barrier Statue of the Drought
 Exterio's Fang
@@ -3685,9 +3093,6 @@ XX-Saber Faultroll
 XX-Saber Fulhelmknight
 XX-Saber Hyunlei
 XX-Saber Ragigura
-
-COMMON
-
 Acidic Downpour
 At One with the Sword
 Avalanching Aussa
@@ -3746,88 +3151,15 @@ X-Saber Galahad
 X-Saber Palomuro
 X-Saber Uruz
 XX-Saber Garsem
-
-========================================================
-========================================================
-[ALBE]A Little Bit of Everything - 150 DP for 5 cards, Total of ?? cards
-Themes: Cards from the Element Packs
-Cover: Ally of Justice Catastor
-Rarity distribution: ?? Ultra Rare, ?? Super Rare, ?? Rare, ?? Common
-
-Ally of Justice Catastor + all cards from the Element Packs
-
-========================================================
-========================================================
-[NMNO]No Means No - 300 DP for 5 cards, Total of  cards
-Themes: Limited Cards
-Cover:
-Rarity distribution:  Ultra Rare,  Super Rare,  Rare,  Common
-
-Game Default Limited Cards
-
-========================================================
-========================================================
-[TOTB]Totally Taboo - 300 DP for 5 cards, Total of  cards
-Themes: Forbidden Cards
-Cover:
-Rarity distribution:  Ultra Rare,  Super Rare,  Rare,  Common
-
-Game Default Forbidden Cards
-
-========================================================
-========================================================
-[WNDS]Wonder in Simplicity - 50 DP for 5 cards, Total of 438 cards
-Themes: Normal Monsters
-Cover: Seiyaryu
-Rarity distribution: No Ultra Rare, No Super Rare, No Rare, All Common
-
-Contains all Normal Monsters.... No Rarity
-
-========================================================
-========================================================
-[PCKF] Picking Flowers - 300 DP for 5 cards, Total of  cards
-Themes:
-Cover:
-Rarity distribution:  Ultra Rare,  Super Rare,  Rare,  Common
-
-ULTRA
-
-
-
-SUPER
-
-
-
-RARE
-
-
-
-COMMON
-
-
-========================================================
-========================================================
-[HNCL]High Noon Constellation - 1146 DP for 5 cards, Total of 60 cards
-Themes: Konami Cards
-Cover: Ambitious Gofer
-Rarity distribution: 3 Ultra Rare, 5 Super Rare, 12 Rare, 40 Common
-
-ULTRA
-
+Ally of Justice Catastor
 Ambitious Gofer
 Cherry Inmato
 D.D.R. - Different Dimension Reincarnation
-
-SUPER
-
 B.E.S. Assault Core
 B.E.S. Big Core MK-2
 Fossil Dig
 Lord British Space Fighter
 Solar Flare Dragon
-
-RARE
-
 B.E.S. Covered Core
 Blue Thunder T-45
 Delta Tri
@@ -3840,9 +3172,6 @@ Sasuke Samurai
 Sasuke Samurai #4
 Shield Recovery
 Victory Viper XX03
-
-COMMON
-
 Aitsu
 A-Team: Trap Disposal Unit
 B.E.S. Crystal Core
@@ -3883,25 +3212,12 @@ Space Mambo
 Tactical Espionage Expert
 The Statue of Easter Island
 Trigon
-
-========================================================
-========================================================
-[CLUS]Clustering Bonds, Take Flight  - 150 DP for 5 cards, Total of 111 cards
-Themes: Yusei Cards
-Cover: Yusei and Star Dust Dragon
-Rarity distribution: 6 Ultra Rare, 9 Super Rare, 24 Rare, 72 Common
-
-ULTRA
-
 Drill Warrior
 Junk Destroyer
 One for One
 Quickdraw Synchron
 Stardust Dragon
 Tuning
-
-SUPER
-
 Debris Dragon
 Junk Synchron
 Level Eater
@@ -3911,9 +3227,6 @@ Starlight Road
 Swift Scarecrow
 Synchron Spirits
 Synchron Explorer
-
-RARE
-
 A/D Changer
 Armory Arm
 Cards of Consonance
@@ -3938,9 +3251,6 @@ Turbo Cannon
 Turbo Warrior
 Urgent Tuning
 Zero Gardna
-
-COMMON
-
 Advanced Draw
 Backup Warrior
 Battle Mania
@@ -4013,24 +3323,11 @@ Turret Warrior
 Unicycular
 Variety Comes Out
 Wild Tornado
-
-========================================================
-========================================================
-[RPDE]Rapid Enforcement - 150 DP for 5 cards, Total of 75 cards
-Themes: Infernity and Scraps Cards
-Cover: Poncho Yusei and Kalin
-Rarity distribution: 5 Ultra Rare, 7 Super Rare, 20 Rare, 43 Common
-
-ULTRA
-
 Infernity Archfiend
 Infernity Launcher
 Infernity Mirage
 Scrap Chimera
 Scrap Twin Dragon
-
-SUPER
-
 Infernity Beetle
 Infernity Inferno
 Scrap Golem
@@ -4038,9 +3335,6 @@ Scrap Lube
 Scrap Searcher
 Scrapstorm
 Scrapyard
-
-RARE
-
 Chain Whirlwind
 Cyber Archfiend
 Delta Flyer
@@ -4060,9 +3354,6 @@ Scrap Goblin
 Scrap Soldier
 Trident Warrior
 ZERO-MAX
-
-COMMON
-
 Archfiend General
 Archfiend Soldier
 Archfiend's Oath
@@ -4106,34 +3397,16 @@ Terrorking Archfiend
 Ultimate Obedient Fiend
 Vilepawn
 Vorse Raider
-
-===========================================================
-============[600]ROW SIX BOOSTER PACKS=====================
-===========================================================
-[PRDS]Proud Spirit - 120 DP for 5 cards, Total of 68 cards
-Themes: Jack Cards
-Cover: Jack and Red Dragon Archfiend
-Rarity distribution: 4 Ultra Rare, 6 Super Rare, 16 Rare, 42 Common
-
-ULTRA RARE
-
 Battle Fader
 Powerful Rebirth
 Red Dragon Archfiend
 Vice Dragon
-
-
-SUPER RARE
-
 Chaos King Archfiend
 Dark Bug
 Dread Dragon
 Egotistical Ape
 Fiendish Chain
 Strong Wind Dragon
-
-RARE
-
 Axe Dragonute
 Creation Resonator
 Dark Resonator
@@ -4150,9 +3423,6 @@ Trap Eater
 Trust Guardian
 Twin-Sword Marauder
 Unibird
-
-COMMON
-
 Archfiend Interceptor
 Assault Spirits
 Attack Gainer
@@ -4195,16 +3465,6 @@ Twin-Shield Defender
 Unicorn Beacon
 Uni-Horned Familiar
 Vice Berserker
-
-========================================================
-========================================================
-[BLKW]Soaring Blackwings - 150 DP for 5 cards, Total of 60 cards
-Themes: Crow Cards
-Cover: Crow
-Rarity distribution: 8 Ultra Rare, 12 Super Rare, 20 Rare, 20 Common
-
-ULTRA
-
 Black Whirlwind
 Blackwing - Blizzard the Far North
 Blackwing - Gale the Whirlwind
@@ -4213,9 +3473,6 @@ Blackwing - Shure the Blue Flame
 Blackwing - Sirocco the Dawn
 Blackwing - Vayu the Emblem of Honor
 Blackwing Armor Master
-
-SUPER
-
 Against the Wind
 Black Salvo
 Blackback
@@ -4228,9 +3485,6 @@ Delta Crow - Anti Reverse
 Imperial Custom
 Star Blast
 Trap Stun
-
-RARE
-
 Blackwing - Aurora the Northern Light
 Blackwing - Backlash
 Blackwing - Bombardment
@@ -4251,9 +3505,6 @@ Late Penalty
 Mine Mole
 Tuning Barrier
 Voltic Bicorn
-
-COMMON
-
 Bicorn Re'em
 Black Thunder
 Blackwing - Boobytrap
@@ -4274,24 +3525,11 @@ Spell Reactor ? RE
 Spirit Burner
 Summon Reactor ? SK
 Trap Reactor ? Y FI
-
-========================================================
-========================================================
-[TSFG]The Secret Flower Garden - 150 DP for 5 cards, Total of 81 cards
-Themes: Akiza Cards
-Cover: Akiza and Witch of the Black Rose
-Rarity distribution: 5 Ultra Rare, 7 Super Rare, 20 Rare,  Common
-
-ULTRA
-
 Emergency Teleport
 Krebons
 Mind Master
 Thought Ruler Archfiend
 Witch of the Black Rose
-
-SUPER
-
 Black Garden
 Gigaplant
 Glow-up Bulb
@@ -4299,9 +3537,6 @@ Queen of Thorns
 Splendid Rose
 Telekinetic Power Well
 Twilight Rose Knight
-
-RARE
-
 Brain Research Lab
 Destructotron
 Evil Thorn
@@ -4322,9 +3557,6 @@ Revival Rose
 Synchro Back
 Teleport
 Wicked Rebirth
-
-COMMON
-
 Armored Axon Kicker
 Battle Teleportation
 Blossom Bombardment
@@ -4374,24 +3606,11 @@ Vengeful Servant
 Violet Witch
 Wall of Ivy
 Wonder Clover
-
-========================================================
-========================================================
-[TWIN]The Twins - 150 DP for 5 cards, Total of 83 cards
-Themes: Leo and Luna Cards
-Cover: Leo & Luna
-Rarity distribution: 5 Ultra Rare, 7 Super Rare, 20 Rare, 51 Common
-
-ULTRA
-
 Ancient Forest
 Batteryman Industrial Strength
 Batteryman Micro-Cell
 Morphtronic Celfon
 WattGiraffe
-
-SUPER
-
 Batteryman AA
 Batteryman Fuel Cell
 Judgment of Thunder
@@ -4399,9 +3618,6 @@ Morphtronic Map
 Morphtronic Radion
 Morphtronic Scopen
 Spore
-
-RARE
-
 Battery Charger
 Batteryman Charger
 Batteryman D
@@ -4422,9 +3638,6 @@ Recycling Batteries
 Short Circuit
 Wattbetta
 Wattkiwi
-
-COMMON
-
 Batteryman AAA
 Batteryman C
 Central Shield
@@ -4476,33 +3689,16 @@ Wattlemur
 Wattpheasant
 Wattsquirrel
 Wattwoodpecker
-
-
-========================================================
-========================================================
-[USUN]Unforgivable Sun - 150 DP for 5 cards, Total of 62 cards
-Themes: Tetsu Trudge Cards
-Cover: Tetsu Trudge and Sector Guards
-Rarity distribution: 4 Ultra Rare, 6 Super Rare, 16 Rare, 36 Common
-
-ULTRA
-
 Stygian Sergeants
 Tech Genus Power Gladiator WAX-1000
 Tech Genus Wonder Magician SXC-1000
 Torapart
-
-SUPER
-
 Defender's Mind
 Masked Knight LV7
 Tech Genus Cyber Magician SC-01
 Tech Genus Rush Shino BE-04
 Tech Genus Striker WA-01
 Tech Genus Werewolf BW-03
-
-RARE
-
 Big Shield Gardna
 Buster Blaster
 Climactic Barricade
@@ -4519,9 +3715,6 @@ Stone Statue of the Aztecs
 Stygian Security
 Stygian Street Patrol
 Wiretap
-
-COMMON
-
 Ashoka Pillar
 Assault Dog
 Blizzard Lizard
@@ -4558,24 +3751,11 @@ Triangle O
 Tyhone
 Warm Worm
 Worm Bait
-
-========================================================
-========================================================
-[FOAS]Flowers on All Sides - 150 DP for 5 cards, Total of 72 cards
-Themes: Carly, Sherry and Mina cards
-Cover: Carly, Sherry and Mina
-Rarity distribution: 5 Ultra Rare, 7 Super Rare, 20 Rare, 50 Common
-
-ULTRA
-
 Centaur Mina
 D.D. Warrior Lady
 Liberty at Last
 Nightmare Wheel
 Wave-Motion Cannon
-
-SUPER
-
 Dark Grepher
 Dimension Wall
 Horse of the Floral Knights
@@ -4583,9 +3763,6 @@ Lava Golem
 Sacred Knight Joan
 Sacred Knight's Shield Barrier
 Sacred Knight's Spearholder
-
-RARE
-
 Ancient Sacred Wyvern
 Avenging Knight Parshath
 Catoblepas and the Witch of Fate
@@ -4606,9 +3783,6 @@ Stealth Bird
 Swarm of Locusts
 Swarm of Scarabs
 Warrior Lady of the Wasteland
-
-COMMON
-
 Allure Queen LV3
 Allure Queen LV5
 Allure Queen LV7
@@ -4649,25 +3823,12 @@ The A. Forces
 The Paths of Destiny
 Unacceptable Result
 Warrior Dai Grepher
-
-========================================================
-========================================================
-[TFIX]Triangle Fixer - 150 DP for 5 cards, Total of 107 cards
-Themes: Yliaster and Dark Signer Cards
-Cover: Yliaster
-Rarity distribution: 6 Ultra Rare, 10 Super Rare, 24 Rare, 67 Common
-
-ULTRA
-
 Dark Diviner
 Dark Flattop
 Frozen Fitzgerald
 Moon Dragon Quilla
 Underground Arachnid
 Zeman the Ape King
-
-SUPER
-
 Altar of the Bound Deity
 Convert Ghost
 Dark Tuner Dark Goddess Witaka
@@ -4678,9 +3839,6 @@ Grand Core
 Sky Core
 Underground Arachnid
 Wise Core
-
-RARE
-
 Dark Tuner Catastrogue
 Dark Tuner Chaos Rogue
 Dark Tuner Dark Ape
@@ -4705,9 +3863,6 @@ Spider's Lair
 Spyder Spider
 Sun Dragon Inti
 Zeman the Ape King
-
-COMMON
-
 Absurd Stealer
 Advanced Force
 Apocatequil
@@ -4775,24 +3930,11 @@ Wisel Guard 3
 Wisel Top
 Wisel Top 3
 Wolf in Sheep's Clothing
-
-========================================================
-========================================================
-[SUPO]Super Polymerization Overdrive - 200 DP for 5 cards, Total of 92 cards
-Themes: Yugi and Jaden Cards
-Cover: Dark Magician and Elemental Hero Neos
-Rarity distribution: 5 Ultra Rare, 7 Super Rare, 19 Rare, 61 Common
-
-ULTRA
-
 Arcana Knight Joker
 Breaker the Magical Warrior
 Dark Paladin
 Elemental Hero Neos
 Neo-Spacian Grand Mole
-
-SUPER
-
 Elemental Hero Neos Knight
 Magician's Valkyria
 Neo Space
@@ -4819,7 +3961,6 @@ Skilled White Magician
 Swift Gaia the Fierce Knight
 Time Wizard
 Winged Kuriboh
-
 Alpha the Magnet Warrior
 Berfomet
 Beta the Magnet Warrior
