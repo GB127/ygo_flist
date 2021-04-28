@@ -1,9 +1,9 @@
 import requests
 import os
 from copy import deepcopy
+import random
 
-filename = "GB_MAX_BANLIST_final.lflist.conf"
-def auto_ban():
+def auto_ban(filename):
     end = "10/26/2010"
     today = "04/27/2021"
     rep_toban = requests.get(f"https://db.ygoprodeck.com/api/v7/cardinfo.php?&startdate={end}&enddate={today}&dateregion=ocg_date")
@@ -30,7 +30,7 @@ def get_cards_pool():
         raise BaseException("Something went wrong")
     return card_pool
 
-def apply_banlist(pool):
+def apply_banlist(filename, pool):
     no_ban = []
     forbidden = [
         "Black Luster Soldier - Envoy of the Beginning",
@@ -183,21 +183,12 @@ def apply_banlist(pool):
             no_ban.append(card)
     return no_ban
 
-
-def allow_all(pool):
+def allow_pool(filename, pool):
     with open(filename, "a") as fichier:
         for card in pool:
             fichier.write(f'{card["id"]} 3 \n')
 
-
-def ban_all(pool):
+def ban_pool(filename, pool):
     with open(filename, "a") as fichier:
         for card in pool:
             fichier.write(f'{card["id"]} 0 \n')
-
-
-
-if __name__ == "__main__":
-    auto_ban()
-    all_cards = get_cards_pool()
-    apply_banlist(all_cards)
