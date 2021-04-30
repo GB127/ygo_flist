@@ -5,13 +5,13 @@ import random
 
 def auto_ban(filename):
     end = "10/26/2010"
-    today = "04/27/2021"
+    today = "04/27/2025"
     rep_toban = requests.get(f"https://db.ygoprodeck.com/api/v7/cardinfo.php?&startdate={end}&enddate={today}&dateregion=ocg_date")
     if rep_toban.status_code == 200:
         all_toban = rep_toban.json()["data"]
     else:
         raise BaseException("Something went wrong")
-    toreturn = "#[2005.4 GOAT]\n!2010.10 GB&MAX\n#Cards after TG5\n"
+    toreturn = f"#[2005.4 GOAT]\n!{filename}\n#Cards after TG5\n"
     for card in all_toban:
         toreturn += f"{card['id']} -1 \n"
 
@@ -19,6 +19,29 @@ def auto_ban(filename):
         os.remove(filename)
     with open(filename, "w") as fichier:
         fichier.write(toreturn)
+
+
+
+
+
+    rep_tocheck = requests.get(f"https://db.ygoprodeck.com/api/v7/cardinfo.php?&startdate={end}&enddate={today}&dateregion=tcg_date")
+    if rep_toban.status_code == 200:
+        all_tocheck = rep_tocheck.json()["data"]
+
+    all_cards = get_cards_pool()
+
+    for card in all_tocheck:
+        if card["id"] in [one["id"] for one in all_cards]:
+            pass
+        else:
+            with open(filename, "a") as fichier:
+                fichier.write(f'{card["id"]} -1 \n')
+
+
+
+
+
+
 
 def get_cards_pool():
     end = "10/26/2010"
@@ -30,7 +53,7 @@ def get_cards_pool():
         raise BaseException("Something went wrong")
     return card_pool
 
-def apply_banlist(filename, pool):
+def apply_banlist(card):
     no_ban = []
     forbidden = [
         "Black Luster Soldier - Envoy of the Beginning",
@@ -168,27 +191,58 @@ def apply_banlist(filename, pool):
         "Royal Oppression",
         "Skill Drain",
         "Ultimate Offering"]
-
-    for card in pool:
-        if card["name"] in forbidden:
-            with open(filename, "a") as fichier:
-                fichier.write(f'{card["id"]} 0 \n')
-        elif card["name"] in limited:
-            with open(filename, "a") as fichier:
-                fichier.write(f'{card["id"]} 1 \n')
-        elif card["name"] in limited:
-            with open(filename, "a") as fichier:
-                fichier.write(f'{card["id"]} 2 \n')
-        else:
-            no_ban.append(card)
-    return no_ban
+    
+    if card["name"] in forbidden:
+        print("forbidden!")
+        return 0
+    elif card["name"] in limited:
+        print("limited!")
+        return 1
+    elif card["name"] in semi:
+        print("semi!")
+        return 2
+    else:
+        return 3
 
 def allow_pool(filename, pool):
     with open(filename, "a") as fichier:
         for card in pool:
-            fichier.write(f'{card["id"]} 3 \n')
+            fichier.write(f'{card["id"]} {apply_banlist(card)} \n')
 
 def ban_pool(filename, pool):
     with open(filename, "a") as fichier:
         for card in pool:
             fichier.write(f'{card["id"]} 0 \n')
+
+
+def split_pool(pool):
+    extras = []
+    monsters = []
+    spells = []
+    traps = []
+    for card in pool:
+        if card["type"] == "Spell Card":
+            spells.append(card)
+        elif card["type"] in ["Fusion Monster", "Synchro Monster", "Synchro Tuner Monster"]:
+            extras.append(card)
+        elif card["type"] in ["Union Effect Monster", 
+                                "Spirit Monster",
+                                "Normal Tuner Monster",
+                                "Tuner Monster",
+                                "Gemini Monster",
+                                "Effect Monster",
+                                "Normal Monster",
+                                "Flip Effect Monster",
+                                "Ritual Monster",
+                                "Toon Monster",
+                                "Ritual Effect Monster"]:
+            monsters.append(card)
+        elif card["type"] == "Trap Card":
+            traps.append(card)
+        elif card["type"] == "Token":
+            pass
+    return monsters, spells, traps, extras
+
+
+if __name__ == "__main__":
+    auto_ban("newtestingcase.lflist.conf")

@@ -15,13 +15,30 @@ def getcommand():
 
 if __name__ == "__main__":
     options = getcommand()
-    if options.seed == 0:
+    if options.seed == "0":
         filename = "GB_MAX_BANLIST_final.lflist.conf"
     else:
+        random.seed(options.seed)
         filename = f'Random_pool_{options.seed}.lflist.conf'
-
     auto_ban(filename)
     all_cards = get_cards_pool()
-    apply_banlist(filename, all_cards)
-    if options.seed != 0:
-        print("allo")
+    if options.seed != "0":
+        monsters, spells, traps, extras = split_pool(all_cards)
+        for ty in [monsters, spells, traps, extras]: random.shuffle(ty)
+
+        # Monsters:
+        allow_pool(filename, monsters[:200])
+        ban_pool(filename, monsters[201:])
+
+        # Spells:
+        allow_pool(filename, spells[:100])
+        ban_pool(filename, spells[101:])
+        # Traps:
+        allow_pool(filename, traps[:100])
+        ban_pool(filename, traps[101:])
+
+        # Extras:
+        allow_pool(filename, extras[:50])
+        ban_pool(filename, extras[51:])
+    else:
+        allow_pool(filename, get_cards_pool())
