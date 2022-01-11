@@ -1,12 +1,23 @@
-from random import shuffle
+from random import seed, shuffle, randint
 import requests
 
+
+def verify_int(fonc):
+    def new_fonction(arg):
+        while True:
+            try:
+                return fonc(arg)
+            except ValueError: 
+                print("Please enter a number")
+    return new_fonction
 class yugioh_modes:
     players = ["Guylain", "Maxime"]
     all_cards = requests.get(f"https://db.ygoprodeck.com/api/v7/cardinfo.php").json()["data"]
+    with open("cards_list.txt", "r") as file:
+        accepted_cards = file.read().rstrip("\n").split("\n")
 
     def __init__(self, player):
-        self.player_turn = 1
+        self.player_turn = randint(0,1)
         self.player = player
         self.Guylain = []
         self.Maxime = []
@@ -22,9 +33,9 @@ class yugioh_modes:
             toreturn += f"{' ' * width}{string2[start:]}"
             return toreturn
 
-
-
         string = f'{start}'
+        if not self[attribute]:
+            return string
 
         for carte in requests.get("https://db.ygoprodeck.com/api/v7/cardinfo.php?name=" + "|".join(self[attribute])).json()["data"]:
             string += f'\n    {carte["name"]}'
@@ -41,9 +52,6 @@ class yugioh_modes:
         head = f"Player: {self.player}\nTour de {self.players[self.player_turn]}"
         line = "\n" + "-"*73 + "\n"
 
-
-
-
         return line.join([  head,
                             self.str_cards("My cards:", self.player),
                             self.str_cards("His cards (For debugging)", self.players[self.players.index(self.player) -1])
@@ -52,8 +60,6 @@ class yugioh_modes:
     def __getitem__(self, name):
         return self.__dict__[name]
 
-
-
     def save(self):
         towrite = f"#[2005.4 GOAT]\n!TEST\n#Cards after TG5\n"
         for card in self.all_cards:
@@ -61,47 +67,51 @@ class yugioh_modes:
                 towrite += f'{card["id"]} -1 \n'
             else:
                 towrite += f'{card["id"]} 3 \n'
-        with open("testing_flist.txt", "w") as file:
+        with open(f"testing_flist{self.player}.txt", "w") as file:
             file.write(towrite)
 
 
 class Draft_manager(yugioh_modes):
     def __init__(self, cards_qty, player):
         super().__init__(player)
+        shuffle(self.accepted_cards)
+        self.pool = self.accepted_cards[:cards_qty]
         self.todraft = []
         self.discarded = []
 
-    def __call__(self):
-        for _ in range(3):
+    def __call__(self, max_draft):
+        while any([len(self[x]) < max_draft for x in self.players]):
             self.deal()
             self.select()
             self.player_turn = abs(self.player_turn) - 1
-        print(self)
-            #print(self["Guylain"])
 
+        self.save()
+    
+    @verify_int
     def select(self):
         if self.player == self.players[self.player_turn]:
-            #command = input(f"Which card do you want? [1 - {len(self.todraft)}]")
-            command = 1
+            #command = input(f"Which card do you want? [1 - {len(self.todraft)}] ")
+            command = "1"
         elif self.player != self.players[self.player_turn]:
-            command = 1
-            #command = input(f"Which card did he want? [1 - {len(self.todraft)}]")
+            command = "1"
+            #command = input(f"Which card did he want? [1 - {len(self.todraft)}] ")
         self[self.players[self.player_turn]].append(self.todraft[int(command)])
-        self.todraft.pop(command)
+        self.todraft.pop(int(command))
 
     def deal(self):
         self.discarded += self.todraft
-        self.todraft = self.all_cards[:5]
+        self.todraft = self.pool[:5]
         if not self.todraft:
-            self.all_cards, self.discarded = self.discarded, []
-            self.todraft = self.all_cards[:5]
-        for _ in range(min(len(self.all_cards), 5)):
-            self.all_cards.pop(0)
+            self.pool, self.discarded = self.discarded, []
+            shuffle(self.pool)
+            self.todraft = self.pool[:5]
+        for _ in range(min(len(self.pool), 5)):
+            self.pool.pop(0)
 
     def __str__(self):
         string = super().__str__()
         return string
 
-test = yugioh_modes("Guylain")
-test.Guylain.append(test.all_cards[5]["name"])
-test.save()
+test = Draft_manager(300, "Guylain")
+test.deal()
+test.select()
