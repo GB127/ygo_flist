@@ -1,14 +1,10 @@
 from random import shuffle
 import requests
 
-def pooler(amount):
-    with open("cards_list.txt", "r") as file:
-        all_cartes = file.read().split("\n")
-    shuffle(all_cartes)
-    return all_cartes[:amount]
-
 class yugioh_modes:
     players = ["Guylain", "Maxime"]
+    all_cards = requests.get(f"https://db.ygoprodeck.com/api/v7/cardinfo.php").json()["data"]
+
     def __init__(self, player):
         self.player_turn = 1
         self.player = player
@@ -17,7 +13,6 @@ class yugioh_modes:
 
     def str_cards(self,start, attribute):
         def justificateur(string, width):
-            print("New card----")
             string2 = string.replace("\n", "\n" + " "*width)
             toreturn = ""
             start = 0
@@ -41,9 +36,10 @@ class yugioh_modes:
             if carte["type"] != "Normal Monster":
                 string += f'\n{justificateur(carte["desc"], 12)}'
         return string
+
     def __str__(self):
         head = f"Player: {self.player}\nTour de {self.players[self.player_turn]}"
-        line = "\n" + "-"*40 + "\n"
+        line = "\n" + "-"*73 + "\n"
 
 
 
@@ -52,14 +48,26 @@ class yugioh_modes:
                             self.str_cards("My cards:", self.player),
                             self.str_cards("His cards (For debugging)", self.players[self.players.index(self.player) -1])
                         ])
+
     def __getitem__(self, name):
         return self.__dict__[name]
 
 
+
+    def save(self):
+        towrite = f"#[2005.4 GOAT]\n!TEST\n#Cards after TG5\n"
+        for card in self.all_cards:
+            if card["name"] not in self[self.player]:
+                towrite += f'{card["id"]} -1 \n'
+            else:
+                towrite += f'{card["id"]} 3 \n'
+        with open("testing_flist.txt", "w") as file:
+            file.write(towrite)
+
+
 class Draft_manager(yugioh_modes):
-    def __init__(self, cards, player):
+    def __init__(self, cards_qty, player):
         super().__init__(player)
-        self.all_cards = cards
         self.todraft = []
         self.discarded = []
 
@@ -94,6 +102,6 @@ class Draft_manager(yugioh_modes):
         string = super().__str__()
         return string
 
-test = Draft_manager(pooler(500), "Guylain")
-
-test()
+test = yugioh_modes("Guylain")
+test.Guylain.append(test.all_cards[5]["name"])
+test.save()
