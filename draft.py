@@ -1,4 +1,4 @@
-from random import seed, shuffle, randint
+from random import shuffle, randint
 import requests
 
 
@@ -10,11 +10,20 @@ def verify_int(fonc):
             except ValueError: 
                 print("Please enter a number")
     return new_fonction
+
+
 class yugioh_modes:
     players = ["Guylain", "Maxime"]
-    all_cards = requests.get(f"https://db.ygoprodeck.com/api/v7/cardinfo.php").json()["data"]
+    all_cards = []
+    accepted_cards = []
     with open("cards_list.txt", "r") as file:
-        accepted_cards = file.read().rstrip("\n").split("\n")
+        tempo = file.read().rstrip("\n").split("\n")
+        for carte in requests.get(f"https://db.ygoprodeck.com/api/v7/cardinfo.php").json()["data"]:
+            all_cards.append(carte)
+            if carte["name"] in tempo:
+                accepted_cards.append(carte)
+    del tempo
+
 
     def __init__(self, player):
         self.player_turn = randint(0,1)
@@ -43,7 +52,6 @@ class yugioh_modes:
                 string += f' ({carte["type"]})\n        {carte["race"]} - {carte["attribute"]} - level: {carte["level"]}, ATK:{carte["atk"]}, DEF:{carte["def"]}'
             elif "Spell" in carte["type"] or "Trap" in carte["type"]:
                 string += f' ({carte["race"]} {carte["type"]})'
-
             if carte["type"] != "Normal Monster":
                 string += f'\n{justificateur(carte["desc"], 12)}'
         return string
@@ -67,7 +75,7 @@ class yugioh_modes:
                 towrite += f'{card["id"]} -1 \n'
             else:
                 towrite += f'{card["id"]} 3 \n'
-        with open(f"testing_flist{self.player}.txt", "w") as file:
+        with open(f"testing_flist{self.player}.lflist.conf", "w") as file:
             file.write(towrite)
 
 
@@ -113,5 +121,5 @@ class Draft_manager(yugioh_modes):
         return string
 
 test = Draft_manager(300, "Guylain")
-test.deal()
-test.select()
+test(5)
+print(test)
