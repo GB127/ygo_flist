@@ -46,7 +46,7 @@ class yugioh_modes:
         if not self[attribute]:
             return string
 
-        for carte in requests.get("https://db.ygoprodeck.com/api/v7/cardinfo.php?name=" + "|".join(self[attribute])).json()["data"]:
+        for carte in self[attribute]:
             string += f'\n    {carte["name"]}'
             if "Monster" in carte["type"]:
                 string += f' ({carte["type"]})\n        {carte["race"]} - {carte["attribute"]} - level: {carte["level"]}, ATK:{carte["atk"]}, DEF:{carte["def"]}'
@@ -121,5 +121,6 @@ class Draft_manager(yugioh_modes):
         return string
 
 test = Draft_manager(300, "Guylain")
-test(5)
+test.deal()
+test.select()
 print(test)
