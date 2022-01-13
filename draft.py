@@ -70,6 +70,10 @@ class yugioh_modes:
 
     def save(self):
         towrite = f"#[2005.4 GOAT]\n!TEST\n#Cards after TG5\n"
+        with open(f'cards_alt.txt') as file:
+            for id in file.readlines():
+                tempo = id.strip("\n")
+                towrite += f'{tempo} -1 \n'
         for card in self.all_cards:
             if card["name"] not in self[self.player]:
                 towrite += f'{card["id"]} -1 \n'
@@ -121,6 +125,4 @@ class Draft_manager(yugioh_modes):
         return string
 
 test = Draft_manager(300, "Guylain")
-test.deal()
-test.select()
-print(test)
+test.save()
