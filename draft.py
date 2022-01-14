@@ -11,23 +11,22 @@ class Draft(yugioh_modes):
             params = {
                         max_draft = total cards drafted
                         todeal = Total cards available
+                        fill = fill as you select cards (for if you select more than 1 cards)
                     }
-            max_draft ([type]): [description]
-            todeal ([type]): [description]
             """
         self.deal(params["todeal"])
         while any([len(self[x]) < params["max_draft"] for x in self.players]):
             print(self)
             for _ in range(params["select"]):
-                self.select(params["select"])
-                if params["reset"]: self.deal(params["todeal"])
-            if not params["reset"]: self.deal(params["todeal"])
+                self.select()
+                if params["fill"]: self.deal(params["fill"])
+            if not params["fill"]: self.deal(params["fill"])
             self.player_turn = abs(self.player_turn) - 1
 
         self.save()
     
     @verify_int
-    def select(self, quantity, deal=False):
+    def select(self):
         if self.debug:
             command = "0"
         elif self.player == self.players[self.player_turn]:
@@ -37,8 +36,11 @@ class Draft(yugioh_modes):
         self[self.players[self.player_turn]].append(self.todraft[int(command)])
         self.todraft.pop(int(command))
 
-    def deal(self, todeal):
-        while len(self.todraft) <= todeal:
+    def deal(self, todeal=5, reset=False):
+        if reset:
+            self.discarded += self.todraft
+            self.todraft = []
+        while len(self.todraft) < todeal:
             self.todraft += [self.pool[0]]
             self.pool.pop(0)
 
@@ -46,9 +48,8 @@ class Draft(yugioh_modes):
         line = "\n" + "-"*73 + "\n"
         strings = super().__str__().split(line)
         strings.insert(1, self.str_cards("Cards pool", "todraft"))
-        return line.join(strings)
+        #return line.join(strings)
+        return self.str_cards("Cards pool", "todraft")
 
 if __name__ == "__main__":
     test = Draft(300, player="Guylain", debug=True)
-    test({"max_draft":1,"todeal": 5, "select":1, "reset":False})
-    print(test)
