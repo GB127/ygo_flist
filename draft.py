@@ -15,25 +15,27 @@ class Draft(yugioh_modes):
             max_draft ([type]): [description]
             todeal ([type]): [description]
             """
+        self.deal(params["todeal"])
         while any([len(self[x]) < params["max_draft"] for x in self.players]):
-            self.deal(params["todeal"])
             print(self)
-            self.select(params["select"])
+            for _ in range(params["select"]):
+                self.select(params["select"])
+                if params["reset"]: self.deal(params["todeal"])
+            if not params["reset"]: self.deal(params["todeal"])
             self.player_turn = abs(self.player_turn) - 1
 
         self.save()
     
     @verify_int
-    def select(self, quantity):
-        for _ in range(quantity):
-            if self.debug:
-                command = "0"
-            elif self.player == self.players[self.player_turn]:
-                command = input(f"Which card do you want? [1 - {len(self.todraft)}] ")
-            elif self.player != self.players[self.player_turn]:
-                command = input(f"Which card did he want? [1 - {len(self.todraft)}] ")
-            self[self.players[self.player_turn]].append(self.todraft[int(command)])
-            self.todraft.pop(int(command))
+    def select(self, quantity, deal=False):
+        if self.debug:
+            command = "0"
+        elif self.player == self.players[self.player_turn]:
+            command = input(f"Which card do you want? [1 - {len(self.todraft)}] ")
+        elif self.player != self.players[self.player_turn]:
+            command = input(f"Which card did he want? [1 - {len(self.todraft)}] ")
+        self[self.players[self.player_turn]].append(self.todraft[int(command)])
+        self.todraft.pop(int(command))
 
     def deal(self, todeal):
         while len(self.todraft) <= todeal:
@@ -48,5 +50,5 @@ class Draft(yugioh_modes):
 
 if __name__ == "__main__":
     test = Draft(300, player="Guylain", debug=True)
-    test({"max_draft":1,"todeal": 5, "select":1})
+    test({"max_draft":1,"todeal": 5, "select":1, "reset":False})
     print(test)
