@@ -1,5 +1,11 @@
-from random import randint
+from random import choice, randint, shuffle, seed
 import requests
+import os
+
+clear = lambda: os.system('cls')
+
+class ygo_Error(BaseException):
+    pass
 
 def verify_int(fonc):
     def new_fonction(arg):
@@ -7,7 +13,7 @@ def verify_int(fonc):
             try:
                 return fonc(arg)
             except ValueError: 
-                print("Please enter a number")
+                print("Please enter a valid number")
     return new_fonction
 
 
@@ -162,18 +168,23 @@ class yugioh_modes:
     del tempo
 
 
-    def __init__(self, player):
+    def __init__(self, cards_qty, player,*, seed_str, debug=False):
+        self.seed = seed_str
+        seed(self.seed)
+        self.debug = debug
         self.player_turn = randint(0,1)
         self.player = player
         self.Guylain = []
         self.Maxime = []
+        shuffle(self.accepted_cards)
+        self.pool = self.accepted_cards[:cards_qty]
 
     def str_cards(self,start, attribute):
         def justificateur(string, width):
             string2 = string.replace("\n", "\n" + " "*width)
             toreturn = ""
             start = 0
-            for longueur in range(60, len(string2), 60):
+            for longueur in range(80, len(string2), 80):
                 toreturn += f"{' ' * width}{string2[start:longueur].ljust(10)}\n"
                 start = longueur
             toreturn += f"{' ' * width}{string2[start:]}"
@@ -183,8 +194,8 @@ class yugioh_modes:
         if not self[attribute]:
             return string
 
-        for carte in self[attribute]:
-            string += f'\n    {carte["name"]}'
+        for no, carte in enumerate(self[attribute]):
+            string += f'\n{no:2}    {carte["name"]}'
             if "Monster" in carte["type"]:
                 string += f' ({carte["type"]})\n        {carte["race"]} - {carte["attribute"]} - level: {carte["level"]}, ATK:{carte["atk"]}, DEF:{carte["def"]}'
             elif "Spell" in carte["type"] or "Trap" in carte["type"]:
@@ -194,18 +205,27 @@ class yugioh_modes:
         return string
 
     def __str__(self):
+        clear()
         head = f"Player: {self.player}\nTour de {self.players[self.player_turn]}"
         line = "\n" + "-"*73 + "\n"
 
-        return line.join([  head,
+        toreturn = [  head,
                             self.str_cards("My cards:", self.player),
-                            self.str_cards("His cards (For debugging)", self.players[self.players.index(self.player) -1])
-                        ])
+                        ]
+        if self.debug:
+            toreturn.insert(2,self.str_cards("His cards (For debugging)",self.players[self.players.index(self.player) -1]))
+        return line.join(toreturn)
 
     def __getitem__(self, name):
         return self.__dict__[name]
 
-    def save(self):
+
+    def __call__(self):
+        print(f'Seed : {self.seed}')
+        for _ in range(5):
+            print(f'     {choice(self.accepted_cards)["name"]}')
+
+    def save(self, seed):
         towrite = f"#[2005.4 GOAT]\n!TEST\n#Cards after TG5\n"
         with open(f'cards_alt.txt') as file:
             for id in file.readlines():
@@ -216,6 +236,9 @@ class yugioh_modes:
                 towrite += f'{card["id"]} -1 \n'
             else:
                 towrite += f'{card["id"]} 3 \n'
-        with open(f"testing_flist{self.player}.lflist.conf", "w") as file:
+        with open(f"{self.player}_{seed}.lflist.conf", "w") as file:
             file.write(towrite)
 
+if __name__ == "__main__":
+    test = yugioh_modes(300,seed_str="Testing2", player="Maxime")
+    test()

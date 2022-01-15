@@ -2,8 +2,8 @@ from random import choice
 from base import ygo_Error, yugioh_modes, verify_int
 
 class Draft(yugioh_modes):
-    def __init__(self, cards_qty,*, player, debug=False):
-        super().__init__(cards_qty, player, debug)
+    def __init__(self, cards_qty,*,seed_str, player, debug=False):
+        super().__init__(cards_qty,player, seed_str=seed_str, debug=debug)
         self.todraft = []
         self.discarded = []
 
@@ -40,6 +40,7 @@ class Draft(yugioh_modes):
                 if not params["fill"]: self.deal(params["shuffle"])
                 self.player_turn = abs(self.player_turn) - 1
 
+        super().__call__()
         if (-1 + params["todeal"] + params["max_draft"] *2) > len(self.pool):
             raise ygo_Error(f'You have not enough cards in the pool to play with these parameters.\nYou need {-1 + params["todeal"] + params["max_draft"] *2} cards in pool. The pool has {len(self.pool)}')
         if (params["todeal"] != len(draft_filters)):
@@ -93,5 +94,5 @@ class Draft(yugioh_modes):
 
 if __name__ == "__main__":
     
-    test = Draft(50, player="Guylain", debug=True)
+    test = Draft(50, seed_str= "testing", player="Guylain", debug=True)
     test("testing")
