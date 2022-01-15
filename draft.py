@@ -7,7 +7,8 @@ class Draft(yugioh_modes):
         self.todraft = []
         self.discarded = []
 
-    def __call__(self,  seed, params={"shuffle":True, "max_draft": 20, "todeal":6, "select": 1, "fill":False, "themed_draft":False}, draft_filters=[("type", "Monster"), ("type", "Trap"),("type", "Ritual"), ("type", "Monster"), ("type", "Spell"), None]):
+    def __call__(self,  seed, params={"shuffle":True, "max_draft": 20, "todeal":5, "select": 1, "fill":False, "themed_draft":False}, 
+                draft_filters=[None for _ in range(5)]):
         """Args:
             params = {  select = how much card selection per turn
                         max_draft = total cards drafted
@@ -41,6 +42,8 @@ class Draft(yugioh_modes):
 
         if (-1 + params["todeal"] + params["max_draft"] *2) > len(self.pool):
             raise ygo_Error(f'You have not enough cards in the pool to play with these parameters.\nYou need {-1 + params["todeal"] + params["max_draft"] *2} cards in pool. The pool has {len(self.pool)}')
+        if (params["todeal"] != len(draft_filters)):
+            raise ygo_Error(f'You must give a filter for each spot.\n{len(draft_filters)} Filters given, {params["todeal"]} cards dealt.')
 
         build_filters_spots()
         game_loop()
