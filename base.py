@@ -227,7 +227,7 @@ class yugioh_modes:
         print(f'Seed : {self.seed}')
         for _ in range(5):
             print(f'     {choice(self.accepted_cards)["name"]}')
-
+        input("Do the checksum match?\nIf yes, continue\nElse, close the terminal and restart.")
     def save(self):
         towrite = f"#[2005.4 GOAT]\n!TEST\n#Cards after TG5\n"
         with open(f'cards_alt.txt') as file:
