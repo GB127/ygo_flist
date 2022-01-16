@@ -7,7 +7,7 @@ class Draft(yugioh_modes):
         self.discarded = []
 
     def __call__(self, 
-                    cards_qtys,
+                    cards_qtys,  # [draft, river, selection]
                     fill,
                     shuffle,
                     themed_spots,
@@ -16,7 +16,7 @@ class Draft(yugioh_modes):
             self.filters= draft_filters + [None for _ in range(river - len(draft_filters))]
             self.river = [None for _ in range(river)]
             if themed_spots:
-                print("WIP")
+                pass
             self.deal(shuffle)
 
         def game_loop():
@@ -27,10 +27,20 @@ class Draft(yugioh_modes):
                 if not fill: self.deal(shuffle)
                 self.player_turn = abs(self.player_turn) - 1
 
+        def error_manager():
+            if max_draft * 2 > len(self.pool):
+                raise ygo_Error(f"Not enough card inpool.\nPool: {len(self.pool)}\nMinimum needed if {max_draft} cards per person: {max_draft * 2}")
+            elif river > len(self.pool):
+                raise ygo_Error(f"River too big.\nPool: {len(self.pool)} cards\nRiver: {river} cards")
+            elif max_sel > river and not fill:
+                raise ygo_Error(f'Selection too big if no fill.\nRiver: {river} cards\nSelecting {max_sel} cards...')
+            elif len(draft_filters) > river:
+                raise ygo_Error(f"Too many filter given.\n{len(draft_filters)}filters given.\n{river} cards in river.")
         super().__call__()
 
         max_draft, river, max_sel = [int(x) for x in cards_qtys]
 
+        error_manager()
         build_filters_spots()
         game_loop()
         self.save()
@@ -82,5 +92,5 @@ class Draft(yugioh_modes):
 
 
 if __name__ == "__main__":
-    test = Draft(300, seed_str="testing", player="Maxime", debug=True)
-    test([20, 5, 2], True, True, True)
+    test = Draft(40, seed_str="testing", player_name="Maxime", debug=True)
+    test([20, 5, 8], False, False, False)
