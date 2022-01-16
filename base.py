@@ -19,8 +19,6 @@ def verify_int(fonc):
 
 class yugioh_modes:
     players = ["Guylain", "Maxime"]
-    all_cards = []
-    accepted_cards = []
     banlist =   {
                 0: [
                     "Black Luster Soldier - Envoy of the Beginning",
@@ -159,18 +157,21 @@ class yugioh_modes:
                     "Ultimate Offering"]
                 }
 
-    with open("cards_list.txt", "r") as file:
-        tempo = file.read().rstrip("\n").split("\n")
-        for carte in requests.get(f"https://db.ygoprodeck.com/api/v7/cardinfo.php").json()["data"]:
-            all_cards.append(carte)
-            if carte["name"] in tempo:
-                accepted_cards.append(carte)
-    del tempo
-
-
     def __init__(self, cards_qty, player,*, seed_str, debug=False):
+        self.all_cards = []
+        self.accepted_cards = []
+
+        with open("cards_list.txt", "r") as file:
+            tempo = file.read().rstrip("\n").split("\n")
+            for carte in requests.get(f"https://db.ygoprodeck.com/api/v7/cardinfo.php").json()["data"]:
+                self.all_cards.append(carte)
+                if carte["name"] in tempo:
+                    self.accepted_cards.append(carte)
+
+
+
+        seed(seed_str)
         self.seed = seed_str
-        seed(self.seed)
         self.debug = debug
         self.player_turn = randint(0,1)
         self.player = player
@@ -247,3 +248,5 @@ class yugioh_modes:
 if __name__ == "__main__":
     test = yugioh_modes(300,seed_str="Testing2", player="Maxime")
     test()
+    test2 = yugioh_modes(300,seed_str="Testing2", player="Guylain")
+    test2()
