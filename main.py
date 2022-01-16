@@ -4,7 +4,7 @@ from random import random
 
 def getcommand():
     parser = argparse.ArgumentParser(description="Yugioh Card pooler")
-    parser.add_argument("--pool", action="store", type=int, default=200)
+    parser.add_argument("--pool", action="store", type=int, default=200, help="# of card in the pool")
     parser.add_argument("--seed",
                             action="store",
                             help="Seed for the randomization",
@@ -17,6 +17,9 @@ def getcommand():
     parser.add_argument("-s", "--shuffle",
                             action="store_true",
                             help="Shuffle cards between actions")
+    parser.add_argument("-v", "--visible", action="store_true",
+                            help="Make common cards always visible.")
+
     parser.add_argument("-f", "--fill",
                             action="store_true",
                             help="Fill cards between actions")
@@ -31,8 +34,9 @@ def getcommand():
 if __name__ == "__main__":
     options = getcommand()
     if options.draft:
-        game = Draft(300,seed_str=options.seed, player="Maxime", debug=True)
+        game = Draft(300,seed_str=options.seed, player_name="Maxime")
         game(options.draft, 
                 options.fill,
                 options.shuffle,
-                options.themed)
+                options.themed,
+                options.visible)

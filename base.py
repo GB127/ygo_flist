@@ -14,6 +14,8 @@ def verify_int(fonc):
                 return fonc(arg)
             except ValueError:
                 print("Please enter a valid number")
+            except IndexError:
+                print("Please enter a valid number")
     return new_fonction
 
 
@@ -168,8 +170,6 @@ class yugioh_modes:
                 if carte["name"] in tempo:
                     self.accepted_cards.append(carte)
 
-
-
         seed(seed_str)
         self.seed = seed_str
         self.debug = debug
@@ -216,12 +216,15 @@ class yugioh_modes:
         toreturn = [  head,
                             self.str_cards("My cards:", self.player),
                         ]
-        if self.debug:
-            toreturn.insert(2,self.str_cards("His cards (For debugging)",self.players[self.players.index(self.player) -1]))
+        #if self.debug:
+        #    toreturn.insert(2,self.str_cards("His cards (For debugging)",self.players[self.players.index(self.player) -1]))
         return line.join(toreturn)
 
     def __getitem__(self, name):
         return self.__dict__[name]
+
+    def __eq__(self, other):
+        return all([self["Guylain"] == other["Guylain"], self["Maxime"] == other["Maxime"]])
 
 
     def __call__(self):

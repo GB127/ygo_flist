@@ -11,6 +11,7 @@ class Draft(yugioh_modes):
                     fill,
                     shuffle,
                     themed_spots,
+                    visible,
                     draft_filters=[]):
         def build_filters_spots():
             self.filters= draft_filters + [None for _ in range(river - len(draft_filters))]
@@ -39,6 +40,7 @@ class Draft(yugioh_modes):
         super().__call__()
 
         max_draft, river, max_sel = [int(x) for x in cards_qtys]
+        self.visible = visible
 
         error_manager()
         build_filters_spots()
@@ -51,9 +53,9 @@ class Draft(yugioh_modes):
         if self.debug:
             command = next((i for i, j in enumerate(self.river) if j), None)
         elif self.player == self.players[self.player_turn]:
-            command = input(f"Which card do you want? [1 - {len(self.river)}] ")
+            command = input(f"Which card do you want? [0 - {len(self.river)-1}] ")
         elif self.player != self.players[self.player_turn]:
-            command = input(f"Which card did he want? [1 - {len(self.river)}] ")
+            command = input(f"Which card did he want? [0 - {len(self.river)-1}] ")
         if not self.river[int(command)]: raise ValueError("A None card has been drawn")
         self[self.players[self.player_turn]].append(self.river[int(command)])
         self.river[int(command)] = None
@@ -85,12 +87,22 @@ class Draft(yugioh_modes):
         try:
             line = "\n" + "-"*73 + "\n"
             strings = super().__str__().split(line)
-            strings.insert(1, self.str_cards("Cards pool", "todraft"))
+            strings.insert(0,str(self.player))
+            strings.insert(1, str(self.players[self.player_turn]))
+            if self.visible and str(self.player) != str(self.players[self.player_turn]):
+                strings.insert(1, self.str_cards("Cards pool", "river"))
+            elif str(self.player) == str(self.players[self.player_turn]):
+                strings.insert(1, self.str_cards("Cards pool", "river"))
             return line.join(strings)
         except TypeError:
             raise BaseException(str([x["name"] if x else None for x in self.river]))
 
 
 if __name__ == "__main__":
-    test = Draft(40, seed_str="testing", player_name="Maxime", debug=True)
-    test([20, 5, 8], False, False, False)
+    test1 = Draft(100, seed_str="testing", player_name="Maxime", debug=True)
+    test1([20, 5, 1], False, False, False)
+
+    test = Draft(100, seed_str="testing", player_name="Guylain", debug=True)
+    test([20, 5, 1], False, False, False)
+
+    print(test1 == test)
