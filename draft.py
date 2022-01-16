@@ -1,4 +1,3 @@
-from random import choice
 from base import ygo_Error, yugioh_modes, verify_int
 
 class Draft(yugioh_modes):
@@ -12,30 +11,21 @@ class Draft(yugioh_modes):
                     fill,
                     shuffle,
                     themed_spots,
-                    draft_filters=[None for _ in range(5)]):
+                    draft_filters=[]):
         """Args:
-            params = {  select = how much card selection per turn
+            params = {
                         max_draft = total cards drafted
                         todeal = Total cards available
+                        select = how much card selection per turn
                     }
             """
-        max_draft, river, max_sel = [int(x) for x in drafting]
         def build_filters_spots():
-            def complete_themed_draft():
-                for _ in range(river - len(self.filters)):
-                    scape = "id"
-                    while scape in ["id", "card_prices","desc", "name", "card_images", "card_sets"]:
-                        scape = choice(list(choice(self.pool).keys()))
-                    valeur = choice(list(set([x[scape] for x in self.pool if scape in x])))
-                    self.filters.append((scape, valeur))
-
-            self.filters = draft_filters
-            if themed_spots:
-                complete_themed_draft()
+            self.filters= draft_filters + [None for _ in range(river - len(draft_filters))]
             self.todraft = [None for _ in range(river)]
+            if themed_spots:
+                print("WIP")
             self.deal(shuffle)
 
-        print(self.todraft)
         def game_loop():
             while any([len(self[x]) < max_draft for x in self.players]):
                 for _ in range(max_sel):
@@ -45,10 +35,10 @@ class Draft(yugioh_modes):
                 self.player_turn = abs(self.player_turn) - 1
 
         super().__call__()
+
+        max_draft, river, max_sel = [int(x) for x in drafting]
         if (-1 + river + max_draft *2) > len(self.pool):
             raise ygo_Error(f'You have not enough cards in the pool to play with these parameters.\nYou need {-1 + river + max_draft *2} cards in pool. The pool has {len(self.pool)}')
-        if (river != len(draft_filters)):
-            raise ygo_Error(f'You must give a filter for each spot.\n{len(draft_filters)} Filters given, {river} cards dealt.')
 
         build_filters_spots()
         game_loop()
@@ -66,6 +56,7 @@ class Draft(yugioh_modes):
         if not self.todraft[int(command)]: raise ValueError("A None card has been drawn")
         self[self.players[self.player_turn]].append(self.todraft[int(command)])
         self.todraft[int(command)] = None
+    
     def deal(self, reset=False):
         def get_card(clé, valeur):
             liste_cartes_filtrées = [valeur in x[clé] for x in self.pool]
@@ -100,6 +91,5 @@ class Draft(yugioh_modes):
 
 
 if __name__ == "__main__":
-    
-    test = Draft(50, seed_str= "testing", player="Guylain", debug=True)
-    test("testing")
+    test = Draft(300, seed_str="testing", player="Maxime", debug=True)
+    test([20, 5, 2], True, True, True)
