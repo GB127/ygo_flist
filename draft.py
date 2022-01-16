@@ -7,19 +7,22 @@ class Draft(yugioh_modes):
         self.todraft = []
         self.discarded = []
 
-    def __call__(self,  seed, params={"shuffle":True, "max_draft": 20, "todeal":5, "select": 1, "fill":False, "themed_draft":False}, 
-                draft_filters=[None for _ in range(5)]):
+    def __call__(self, 
+                    drafting,
+                    fill,
+                    shuffle,
+                    themed_spots,
+                    draft_filters=[None for _ in range(5)]):
         """Args:
             params = {  select = how much card selection per turn
                         max_draft = total cards drafted
                         todeal = Total cards available
-                        fill = fill as you select cards (for if you select more than 1 cards)
-                        shuffle = Shuffle between selections?
                     }
             """
+        max_draft, river, max_sel = [int(x) for x in drafting]
         def build_filters_spots():
             def complete_themed_draft():
-                for _ in range(params["todeal"] - len(self.filters)):
+                for _ in range(river - len(self.filters)):
                     scape = "id"
                     while scape in ["id", "card_prices","desc", "name", "card_images", "card_sets"]:
                         scape = choice(list(choice(self.pool).keys()))
@@ -27,41 +30,42 @@ class Draft(yugioh_modes):
                     self.filters.append((scape, valeur))
 
             self.filters = draft_filters
-            if params["themed_draft"]:
+            if themed_spots:
                 complete_themed_draft()
-            self.todraft = [None for _ in range(params["todeal"])]
-            self.deal(params["shuffle"])
+            self.todraft = [None for _ in range(river)]
+            self.deal(shuffle)
 
+        print(self.todraft)
         def game_loop():
-            while any([len(self[x]) < params["max_draft"] for x in self.players]):
-                for _ in range(params["select"]):
+            while any([len(self[x]) < max_draft for x in self.players]):
+                for _ in range(max_sel):
                     self.select()
-                    if params["fill"]: self.deal(params["shuffle"])
-                if not params["fill"]: self.deal(params["shuffle"])
+                    if fill: self.deal(shuffle)
+                if not fill: self.deal(shuffle)
                 self.player_turn = abs(self.player_turn) - 1
 
         super().__call__()
-        if (-1 + params["todeal"] + params["max_draft"] *2) > len(self.pool):
-            raise ygo_Error(f'You have not enough cards in the pool to play with these parameters.\nYou need {-1 + params["todeal"] + params["max_draft"] *2} cards in pool. The pool has {len(self.pool)}')
-        if (params["todeal"] != len(draft_filters)):
-            raise ygo_Error(f'You must give a filter for each spot.\n{len(draft_filters)} Filters given, {params["todeal"]} cards dealt.')
+        if (-1 + river + max_draft *2) > len(self.pool):
+            raise ygo_Error(f'You have not enough cards in the pool to play with these parameters.\nYou need {-1 + river + max_draft *2} cards in pool. The pool has {len(self.pool)}')
+        if (river != len(draft_filters)):
+            raise ygo_Error(f'You must give a filter for each spot.\n{len(draft_filters)} Filters given, {river} cards dealt.')
 
         build_filters_spots()
         game_loop()
-        self.save(seed)
-    
+        self.save()
+
     @verify_int
     def select(self):
         print(self)
         if self.debug:
-            command = "0"
+            command = next((i for i, j in enumerate(self.todraft) if j), None)
         elif self.player == self.players[self.player_turn]:
             command = input(f"Which card do you want? [1 - {len(self.todraft)}] ")
         elif self.player != self.players[self.player_turn]:
             command = input(f"Which card did he want? [1 - {len(self.todraft)}] ")
+        if not self.todraft[int(command)]: raise ValueError("A None card has been drawn")
         self[self.players[self.player_turn]].append(self.todraft[int(command)])
         self.todraft[int(command)] = None
-
     def deal(self, reset=False):
         def get_card(clé, valeur):
             liste_cartes_filtrées = [valeur in x[clé] for x in self.pool]
@@ -86,10 +90,13 @@ class Draft(yugioh_modes):
 
 
     def __str__(self):
-        line = "\n" + "-"*73 + "\n"
-        strings = super().__str__().split(line)
-        strings.insert(1, self.str_cards("Cards pool", "todraft"))
-        return line.join(strings)
+        try:
+            line = "\n" + "-"*73 + "\n"
+            strings = super().__str__().split(line)
+            strings.insert(1, self.str_cards("Cards pool", "todraft"))
+            return line.join(strings)
+        except TypeError:
+            raise BaseException(str([x["name"] if x else None for x in self.todraft]))
 
 
 if __name__ == "__main__":

@@ -12,7 +12,7 @@ def verify_int(fonc):
         while True:
             try:
                 return fonc(arg)
-            except ValueError: 
+            except ValueError:
                 print("Please enter a valid number")
     return new_fonction
 
@@ -195,6 +195,9 @@ class yugioh_modes:
             return string
 
         for no, carte in enumerate(self[attribute]):
+            if not carte: 
+                string += "Empty Spot\n"
+                continue
             string += f'\n{no:2}    {carte["name"]}'
             if "Monster" in carte["type"]:
                 string += f' ({carte["type"]})\n        {carte["race"]} - {carte["attribute"]} - level: {carte["level"]}, ATK:{carte["atk"]}, DEF:{carte["def"]}'
@@ -225,7 +228,7 @@ class yugioh_modes:
         for _ in range(5):
             print(f'     {choice(self.accepted_cards)["name"]}')
 
-    def save(self, seed):
+    def save(self):
         towrite = f"#[2005.4 GOAT]\n!TEST\n#Cards after TG5\n"
         with open(f'cards_alt.txt') as file:
             for id in file.readlines():
@@ -236,7 +239,7 @@ class yugioh_modes:
                 towrite += f'{card["id"]} -1 \n'
             else:
                 towrite += f'{card["id"]} 3 \n'
-        with open(f"{self.player}_{seed}.lflist.conf", "w") as file:
+        with open(f"{self.player}_{self.seed}.lflist.conf", "w") as file:
             file.write(towrite)
 
 if __name__ == "__main__":
