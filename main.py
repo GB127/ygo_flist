@@ -1,4 +1,4 @@
-from draft import Draft
+from classe.draft import Draft
 import argparse
 from random import random
 
@@ -34,7 +34,7 @@ def getcommand():
 if __name__ == "__main__":
     options = getcommand()
     if options.draft:
-        game = Draft(300,seed_str=options.seed, player_name="Maxime")
+        game = Draft(300,seed_str=options.seed, player_name="Guylain")
         game(options.draft, 
                 options.fill,
                 options.shuffle,

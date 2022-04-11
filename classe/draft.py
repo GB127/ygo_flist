@@ -1,4 +1,4 @@
-from classes.base import ygo_Error, yugioh_modes, verify_int
+from classe.base import ygo_Error, yugioh_modes, verify_int
 
 class Draft(yugioh_modes):
     def __init__(self, pool_size,*,seed_str, player_name, debug=False):
