@@ -1,23 +1,4 @@
 from random import choice, randint, shuffle, seed
-import requests
-import os
-
-clear = lambda: os.system('cls')
-
-class ygo_Error(BaseException):
-    pass
-
-def verify_int(fonc):
-    def new_fonction(arg):
-        while True:
-            try:
-                return fonc(arg)
-            except ValueError:
-                print("Please enter a valid number")
-            except IndexError:
-                print("Please enter a valid number")
-    return new_fonction
-
 
 class yugioh_modes:
     players = ["Guylain", "Maxime"]
@@ -159,81 +140,7 @@ class yugioh_modes:
                     "Ultimate Offering"]
                 }
 
-    def __init__(self, cards_qty, player,*, seed_str, debug=False):
-        self.all_cards = []
-        self.accepted_cards = []
 
-        with open("cards_list.txt", "r") as file:
-            tempo = file.read().rstrip("\n").split("\n")
-            for carte in requests.get(f"https://db.ygoprodeck.com/api/v7/cardinfo.php").json()["data"]:
-                self.all_cards.append(carte)
-                if carte["name"] in tempo:
-                    self.accepted_cards.append(carte)
-
-        seed(seed_str)
-        self.seed = seed_str
-        self.debug = debug
-        self.player_turn = randint(0,1)
-        self.player = player
-        self.Guylain = []
-        self.Maxime = []
-        shuffle(self.accepted_cards)
-        self.pool = self.accepted_cards[:cards_qty]
-
-    def str_cards(self,start, attribute):
-        def justificateur(string, width):
-            string2 = string.replace("\n", "\n" + " "*width)
-            toreturn = ""
-            start = 0
-            for longueur in range(80, len(string2), 80):
-                toreturn += f"{' ' * width}{string2[start:longueur].ljust(10)}\n"
-                start = longueur
-            toreturn += f"{' ' * width}{string2[start:]}"
-            return toreturn
-
-        string = f'{start} - {len(self[attribute])} cards'
-        if not self[attribute]:
-            return string
-
-        for no, carte in enumerate(self[attribute]):
-            if not carte: 
-                string += "Empty Spot\n"
-                continue
-            string += f'\n{no:2}    {carte["name"]}'
-            if "Monster" in carte["type"]:
-                string += f' ({carte["type"]})\n        {carte["race"]} - {carte["attribute"]} - level: {carte["level"]}, ATK:{carte["atk"]}, DEF:{carte["def"]}'
-            elif "Spell" in carte["type"] or "Trap" in carte["type"]:
-                string += f' ({carte["race"]} {carte["type"]})'
-            if carte["type"] != "Normal Monster":
-                string += f'\n{justificateur(carte["desc"], 12)}'
-        return string
-
-    def __str__(self):
-        clear()
-        head = f"Player: {self.player}\nTour de {self.players[self.player_turn]}"
-        line = "\n" + "-"*73 + "\n"
-
-        toreturn = [  head,
-                            self.str_cards("My cards:", self.player),
-                        ]
-        #if self.debug:
-        #    toreturn.insert(2,self.str_cards("His cards (For debugging)",self.players[self.players.index(self.player) -1]))
-        return line.join(toreturn)
-
-    def __getitem__(self, name):
-        return self.__dict__[name]
-
-    def __eq__(self, other):
-        return all([self["Guylain"] == other["Guylain"], self["Maxime"] == other["Maxime"]])
-
-
-    def __call__(self):
-        print(f'Seed : {self.seed}')
-        for _ in range(5):
-            print(f'     {choice(self.accepted_cards)["name"]}')
-        if not self.debug:
-            input("Do the checksum match?\nIf yes, continue\nElse, close the terminal and restart.")
-    
     def save(self):
         towrite = f"#[2005.4 GOAT]\n!TEST\n#Cards after TG5\n"
         with open(f'cards_alt.txt') as file:

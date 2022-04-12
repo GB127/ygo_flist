@@ -1,11 +1,30 @@
 from requests import get
 
-from .classe.card import Card
+from classe.card import Monster
 
-print(get(f"https://db.ygoprodeck.com/api/v7/cardinfo.php"))
+print(get(f"https://db.ygoprodeck.com/api/v7/cardinfo.php?name=kuriboh").json()["data"][0])
 
 
-class Test_card:
+class Test_card_monster:
+    card_dict = {'id': 40640057, 'name': 'Kuriboh', 'type': 'Effect Monster', 'desc': "During damage calculation, if your opponent's monster attacks (Quick Effect): You can discard this card; you take no battle damage from that battle.", 'atk': 300, 'def': 200, 'level': 1, 'race': 'Fiend', 'attribute': 'DARK', 'archetype': 'Kuriboh', 'card_sets': [{'set_name': 'Brothers of Legend', 'set_code': 'BROL-EN062', 'set_rarity': 'Ultra Rare', 'set_rarity_code': '(UR)', 'set_price': '0'}, {'set_name': 'Champion Pack: Game Two', 'set_code': 'CP02-EN006', 'set_rarity': 'Rare', 'set_rarity_code': '(R)', 'set_price': '8.87'}, {'set_name': 'Dark Beginning 2', 'set_code': 'DB2-EN044', 'set_rarity': 'Rare', 'set_rarity_code': '(R)', 'set_price': '2.25'}, {'set_name': 'Dark Legends', 'set_code': 'DLG1-EN038', 'set_rarity': 'Common', 'set_rarity_code': '(C)', 'set_price': '1.35'}, {'set_name': 'Duel Terminal - Preview Wave 1', 'set_code': 'DTP1-EN007', 'set_rarity': 'Duel Terminal Normal Parallel Rare', 'set_rarity_code': '(DNPR)', 'set_price': '3216.78'}, {'set_name': 'Duel Terminal 1', 'set_code': 'DT01-EN007', 'set_rarity': 'Duel Terminal Normal Parallel Rare', 'set_rarity_code': '(DNPR)', 'set_price': '12.96'}, {'set_name': 'Duelist League 2010 participation cards', 'set_code': 'DL09-EN003', 'set_rarity': 'Rare', 'set_rarity_code': '(R)', 'set_price': '8.75'}, {'set_name': 'Duelist Pack: Battle City', 'set_code': 'DPBC-EN015', 'set_rarity': 'Common', 'set_rarity_code': '(C)', 'set_price': '1.9'}, {'set_name': 'Duelist Pack: Yugi', 'set_code': 'DPYG-EN005', 'set_rarity': 'Common', 'set_rarity_code': '(C)', 'set_price': '1.49'}, {'set_name': 'Forbidden Legacy', 'set_code': 'FL1-EN003', 'set_rarity': 'Secret Rare', 'set_rarity_code': '(ScR)', 'set_price': '12.17'}, {'set_name': 'Hidden Arsenal: Chapter 1', 'set_code': 'HAC1-EN005', 'set_rarity': 'Common', 'set_rarity_code': '(C)', 'set_price': '0'}, {'set_name': 'Hidden Arsenal: Chapter 1', 'set_code': 'HAC1-EN005', 'set_rarity': 'Duel Terminal Normal Parallel Rare', 'set_rarity_code': '(DNPR)', 'set_price': '0'}, {'set_name': "Legendary Collection 3: Yugi's World Mega Pack", 'set_code': 'LCYW-EN018', 'set_rarity': 'Super Rare', 'set_rarity_code': '(SR)', 'set_price': '2.89'}, {'set_name': 'Metal Raiders', 'set_code': 'MRD-071', 'set_rarity': 'Super Rare', 'set_rarity_code': '(SR)', 'set_price': '6.13'}, {'set_name': 'Metal Raiders', 'set_code': 'MRD-E071', 'set_rarity': 'Super Rare', 'set_rarity_code': '(SR)', 'set_price': '13.13'}, {'set_name': 'Metal Raiders', 'set_code': 'MRD-EN071', 'set_rarity': 'Super Rare', 'set_rarity_code': '(SR)', 'set_price': '12.7'}, {'set_name': 'Millennium Pack', 'set_code': 'MIL1-EN034', 'set_rarity': 'Common', 'set_rarity_code': '(C)', 'set_price': '1.81'}, {'set_name': 'Retro Pack', 'set_code': 'RP01-EN037', 'set_rarity': 'Rare', 'set_rarity_code': '(R)', 'set_price': '16.34'}, {'set_name': 'Speed Duel Starter Decks: Match of the Millennium', 'set_code': 'SS04-ENA13', 'set_rarity': 'Common', 'set_rarity_code': '(C)', 'set_price': '1.54'}, {'set_name': 'Starter Deck 2006', 'set_code': 'YSD-EN013', 'set_rarity': 'Common', 'set_rarity_code': '(C)', 'set_price': '1.45'}, {'set_name': 'Starter Deck: Yugi Evolution', 'set_code': 'SYE-019', 'set_rarity': 'Common', 'set_rarity_code': '(C)', 'set_price': '2.18'}, {'set_name': 'Starter Deck: Yugi Reloaded', 'set_code': 'YSYR-EN008', 'set_rarity': 'Common', 'set_rarity_code': '(C)', 'set_price': '1.5'}, {'set_name': 'Structure Deck: Yugi Muto', 'set_code': 'SDMY-EN020', 'set_rarity': 'Common', 'set_rarity_code': '(C)', 'set_price': '1.24'}, {'set_name': 'Yu-Gi-Oh! Advent Calendar (2019)', 'set_code': 'AC19-EN001', 'set_rarity': 'Ultra Rare', 'set_rarity_code': '(UR)', 'set_price': '4.78'}, {'set_name': 'Yu-Gi-Oh! Power of Chaos: Yugi the Destiny promotional cards', 'set_code': 'PCY-005', 'set_rarity': 'Prismatic Secret Rare', 'set_rarity_code': '(PScR)', 'set_price': '68.18'}, {'set_name': 'Yu-Gi-Oh! Power of Chaos: Yugi the Destiny promotional cards', 'set_code': 'PCY-E005', 'set_rarity': 'Prismatic Secret Rare', 'set_rarity_code': '(PScR)', 'set_price': '62.8'}, {'set_name': "Yugi's Legendary Decks", 'set_code': 'YGLD-ENA22', 'set_rarity': 'Common', 'set_rarity_code': '(C)', 'set_price': '0'}, {'set_name': "Yugi's Legendary Decks", 'set_code': 'YGLD-ENB15', 'set_rarity': 'Common', 'set_rarity_code': '(C)', 'set_price': '0'}, {'set_name': "Yugi's Legendary Decks", 'set_code': 'YGLD-ENC23', 'set_rarity': 'Common', 'set_rarity_code': '(C)', 'set_price': '0'}], 'card_images': [{'id': 40640057, 'image_url': 'https://storage.googleapis.com/ygoprodeck.com/pics/40640057.jpg', 'image_url_small': 'https://storage.googleapis.com/ygoprodeck.com/pics_small/40640057.jpg'}, {'id': 40640058, 'image_url': 'https://storage.googleapis.com/ygoprodeck.com/pics/40640058.jpg', 'image_url_small': 'https://storage.googleapis.com/ygoprodeck.com/pics_small/40640058.jpg'}, {'id': 40640059, 'image_url': 'https://storage.googleapis.com/ygoprodeck.com/pics/40640059.jpg', 'image_url_small': 'https://storage.googleapis.com/ygoprodeck.com/pics_small/40640059.jpg'}], 'card_prices': [{'cardmarket_price': '0.04', 'tcgplayer_price': '0.10', 'ebay_price': '2.95', 'amazon_price': 
+                    '0.74', 'coolstuffinc_price': '3.99'}]}
     def test_init(self):
-        tempo = Card({"allo":3})
-        raise NotImplementedError("Test to check the init of a single card!")
+        tempo = Monster(Test_card_monster.card_dict)
+
+        for attribute in ["name","type","level", "attribute", "card type", "effect", "atk", "def"]:
+            assert hasattr(tempo, attribute), f'{attribute} not created\n'
+
+
+    def test_correct_info(self):
+        tempo = Monster(Test_card_monster.card_dict)
+
+        for attribute, expected in zip(["name","card type", "type", "attribute", "atk", "def", "effect"],["Kuriboh","Effect Monster", "Fiend", "Dark", 300, 200, "During damage calculation, if your opponent's monster attacks (Quick Effect): You can discard this card; you take no battle damage from that battle."]):
+            assert tempo.__dict__[attribute] == expected
+
+    def test_str(self):
+        tempo = Monster(Test_card_monster.card_dict)
+        attendu = ( "Kuriboh\n"
+                    "Effect Monster   Fiend   Dark   1   300   200\n"
+                    "During damage calculation, if your opponent's monster attacks (Quick Effect):\n "
+                    "You can discard this card; you take no battle damage from that battle.")
+        assert str(tempo) == attendu
