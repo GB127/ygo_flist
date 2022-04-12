@@ -1,2 +1,3 @@
-__pycache__/cards.cpython-38.pyc
+*/__pycache__
 tempo_listmaker/
+.vscode/settings.json

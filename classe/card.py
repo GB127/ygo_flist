@@ -1,3 +1,5 @@
+from textwrap import fill as text_wrap
+
 class Card:
     def __init__(self, dicto):
         self.name = dicto["name"]
@@ -16,7 +18,7 @@ class Card:
                     continue
                 liste.append(str(self[attribute]))
             return "   ".join(liste)
-        return f'{self.name}\n{no_name_effect()}\n{self.effect}'
+        return f'{self.name}\n{no_name_effect()}\n{text_wrap(self.effect, 80)}'
 
     def __getitem__(self, key):
         return self.__dict__[key]

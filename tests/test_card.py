@@ -25,6 +25,6 @@ class Test_card_monster:
         tempo = Monster(Test_card_monster.card_dict)
         attendu = ( "Kuriboh\n"
                     "Effect Monster   Fiend   Dark   1   300   200\n"
-                    "During damage calculation, if your opponent's monster attacks (Quick Effect):\n "
+                    "During damage calculation, if your opponent's monster attacks (Quick Effect):\n"
                     "You can discard this card; you take no battle damage from that battle.")
         assert str(tempo) == attendu

@@ -23,6 +23,7 @@ class Pool:
                 return Trap(dicto)
 
         cards = []
+        self.discard = []
         self.dependent = []
 
         for card in fetch_all_cards():
@@ -39,11 +40,23 @@ class Pool:
     def __getitem__(self,id:int):
         return self.pool[id]
 
-    def deal(self, qty):
+    def deal(self, qty:int)->list:
         toreturn = self.pool[:qty]
         for _ in range(qty):
             self.pool.pop(0)
         return toreturn
+
+    def take_discard(self, cards:list):
+        self.discard += cards
+
+    def shuffle(self):
+        shuffle(self.pool)
+
+
+    def mix_discarded_pool(self):
+        self.pool = self.pool + self.discard
+        self.discard = []
+
 
     def __len__(self):
         return len(self.pool)
