@@ -1,7 +1,4 @@
-from random import choice, randint, shuffle, seed
-
-class yugioh_modes:
-    players = ["Guylain", "Maxime"]
+class User:
     banlist =   {
                 0: [
                     "Black Luster Soldier - Envoy of the Beginning",
@@ -139,6 +136,15 @@ class yugioh_modes:
                     "Skill Drain",
                     "Ultimate Offering"]
                 }
+
+    def __init__(self, username):
+        assert username in ["Guylain", "Maxime"]
+        self.username = username
+        self.cards = []
+
+    def take_cards(self, liste_card):
+        assert isinstance(liste_card, list)
+        self.cards += liste_card
 
 
     def save(self):
